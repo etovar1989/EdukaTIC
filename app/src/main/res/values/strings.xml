@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">edukatic_v1</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="title_fragment">Inicio de sesiòn</string>
+    <string name="title_user">Usuario: </string>
+    <string name="title_pws">Clave: </string>
+    <string name="title_button">Ingresar </string>
+    <string name="title_QR">QR </string>
+    <string name="title_CC">CC </string>
+    <string name="title_consulta">Consultar por </string>
+    <string name="title_volver">Volver </string>
+    <string name="title_consultaCC">Consultar por CC </string>
+    <string name="title_consul">Consultar</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>
