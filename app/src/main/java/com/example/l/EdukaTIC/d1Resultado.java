@@ -75,6 +75,13 @@ public class d1Resultado extends AppCompatActivity implements Response.ErrorList
         } );
 
 
+
+
+
+
+
+
+
     }
 
     private void validarCedula( ) {
@@ -110,19 +117,36 @@ public class d1Resultado extends AppCompatActivity implements Response.ErrorList
 
             dato1 = ( jsonObject.optString( "validador" ) );
 
+            if(dato1.equals( "1" )){
+                Toast.makeText( this,"Se ha realizado el primer registro con exito", Toast.LENGTH_SHORT).show();
+                img1.setVisibility(View.VISIBLE);
+            }if(dato1.equals( "2" )){
+                Toast.makeText( this,"Se ha realizado el segundo registro con exito", Toast.LENGTH_SHORT).show();
+                img1.setVisibility(View.VISIBLE);
+            }if(dato1.equals( "3" )){
+                Toast.makeText( this,"El profe ya tiene el primer registro", Toast.LENGTH_SHORT).show();
+                img2.setVisibility(View.VISIBLE);
+            }if(dato1.equals( "4" )){
+                Toast.makeText( this,"Se ha realizado el segundo registro con exito", Toast.LENGTH_SHORT).show();
+                img1.setVisibility(View.VISIBLE);
+            }if(dato1.equals( "5" )){
+                Toast.makeText( this,"El profe ya tiene el segundo registro", Toast.LENGTH_SHORT).show();
+                img2.setVisibility(View.VISIBLE);
+            }if(dato1.equals( "6" )){
+                Toast.makeText( this,"El profe no esta registrado para el evento contatarce con el administrador", Toast.LENGTH_SHORT).show();
+                img2.setVisibility(View.VISIBLE);
+            }if(dato1.equals( "7" )){
+                Toast.makeText( this,"No hay datos", Toast.LENGTH_SHORT).show();
+                img2.setVisibility(View.VISIBLE);
+            }
+
+
+
         } catch (JSONException e) {
             e.printStackTrace();
         }
 
-        if(dato1.equals("Ok")){
-            Toast.makeText( this,"Ok, se permite el ingreso "+dato1, Toast.LENGTH_SHORT).show();
-            img1.setVisibility(View.VISIBLE);
-        }else{
-            Toast.makeText( this,"Hay mk no funciono "+dato1, Toast.LENGTH_SHORT).show();
-            img2.setVisibility(View.VISIBLE);
-
-        }
-
-
     }
+
+
 }

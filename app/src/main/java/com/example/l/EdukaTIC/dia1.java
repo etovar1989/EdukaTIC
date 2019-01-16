@@ -44,7 +44,7 @@ public class dia1 extends AppCompatActivity {
             public void onClick(View view) {
 
 
-                opc = "1";
+                opc = "2";
                 tipo = "Reingreso";
 
                 com.example.l.EdukaTIC.User usuario = new com.example.l.EdukaTIC.User();

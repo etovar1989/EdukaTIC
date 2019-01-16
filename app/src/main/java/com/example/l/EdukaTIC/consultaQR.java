@@ -15,7 +15,6 @@ import me.dm7.barcodescanner.zxing.ZXingScannerView;
 public class consultaQR extends AppCompatActivity implements ZXingScannerView.ResultHandler{
 
     private ZXingScannerView myScannerView;
-    Button btnEcanear;
     String dato="";
 
     @Override
@@ -23,6 +22,10 @@ public class consultaQR extends AppCompatActivity implements ZXingScannerView.Re
         super.onCreate( savedInstanceState );
         setContentView( R.layout.activity_consulta_qr );
 
+        myScannerView = new ZXingScannerView( this );
+        setContentView( myScannerView );
+        myScannerView.setResultHandler( this );
+        myScannerView.startCamera();
 
 
     }
@@ -32,14 +35,6 @@ public class consultaQR extends AppCompatActivity implements ZXingScannerView.Re
     @Override
     public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
         super.onRequestPermissionsResult( requestCode, permissions, grantResults );
-
-    }
-
-    public void btnEscanear(View vista){
-        myScannerView = new ZXingScannerView( this );
-        setContentView( myScannerView );
-        myScannerView.setResultHandler( this );
-        myScannerView.startCamera();
 
     }
 
