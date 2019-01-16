@@ -60,8 +60,6 @@ public class d1Resultado extends AppCompatActivity implements Response.ErrorList
         //Toast.makeText( this,"OK "+opc, Toast.LENGTH_SHORT).show();
         //Toast.makeText( this,"OK "+cc, Toast.LENGTH_SHORT).show();
 
-
-
         rq = Volley.newRequestQueue(this);
         validarCedula();
 
@@ -73,13 +71,6 @@ public class d1Resultado extends AppCompatActivity implements Response.ErrorList
                 finish();
             }
         } );
-
-
-
-
-
-
-
 
 
     }

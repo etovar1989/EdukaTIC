@@ -73,7 +73,7 @@ public class Menu extends AppCompatActivity {
             }
         } );
 
-        img5 = (ImageView) findViewById( R.id.imgSalir );
+        img5 = (ImageView) findViewById( R.id.imgClose2 );
         img5.setOnClickListener( new View.OnClickListener() {
             @Override
             public void onClick(View view) {

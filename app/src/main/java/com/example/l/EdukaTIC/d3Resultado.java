@@ -90,10 +90,34 @@ public class d3Resultado extends AppCompatActivity implements Response.ErrorList
             dato1 = ( jsonObject.optString( "validador" ) );
             //Toast.makeText( this,dato1, Toast.LENGTH_SHORT).show();
             texto = (TextView)findViewById( R.id.txtRespuesta );
-            texto.setText( dato1 );
-            if(dato1.equals( "No hay datos" ) || dato1.equals( "Este no es el taller de el profe" ) || dato1.equals( "Este profe ya hizo los dos registros" )){
+
+            if(dato1.equals( "1" )){
+                //Toast.makeText( this,"Se ha realizado el primer registro con exito", Toast.LENGTH_SHORT).show();
+                texto.setText( "Se ha realizado el primer registro con exito" );
+            }if(dato1.equals( "2" )){
+                //Toast.makeText( this,"Se ha realizado el segundo registro con exito", Toast.LENGTH_SHORT).show();
+                texto.setText( "Se ha realizado el segundo registro con exito" );
+            }if(dato1.equals( "3" )){
+                //Toast.makeText( this,"El profe ya tiene el primer registro", Toast.LENGTH_SHORT).show();
+                texto.setText( "El profe ya tiene el primer registro" );
+                texto.setTextColor( Color.RED);
+            }if(dato1.equals( "4" )){
+                //Toast.makeText( this,"Se ha realizado el segundo registro con exito", Toast.LENGTH_SHORT).show();
+                texto.setText( "Se ha realizado el segundo registro con exito\"" );
+            }if(dato1.equals( "5" )){
+                //Toast.makeText( this,"El profe ya tiene el segundo registro", Toast.LENGTH_SHORT).show();
+                texto.setText( "El profe ya tiene el segundo registro" );
+                texto.setTextColor( Color.RED);
+            }if(dato1.equals( "6" )){
+                //Toast.makeText( this,"El profe no esta registrado para el evento contatarce con el administrador", Toast.LENGTH_SHORT).show();
+                texto.setText( "El profe no esta registrado para el este taller" );
+                texto.setTextColor( Color.RED);
+            }if(dato1.equals( "7" )){
+                //Toast.makeText( this,"No hay datos", Toast.LENGTH_SHORT).show();
+                texto.setText( "No hay datos" );
                 texto.setTextColor( Color.RED);
             }
+
 
 
 

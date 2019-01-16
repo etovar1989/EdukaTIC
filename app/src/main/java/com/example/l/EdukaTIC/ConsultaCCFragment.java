@@ -34,6 +34,7 @@ public class ConsultaCCFragment extends Fragment implements Response.Listener<JS
     String ubicacion = "";
     String requisitos = "";
     String expositor = "";
+    String idTaller = "";
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -78,6 +79,7 @@ public class ConsultaCCFragment extends Fragment implements Response.Listener<JS
             ubicacion = ( jsonObject.optString( "salaTaller" ) );
             requisitos = ( jsonObject.optString( "reqTaller" ) );
             expositor = ( jsonObject.optString( "expositorTaller" ) );
+            idTaller = ( jsonObject.optString( "idTaller" ) );
 
         } catch (JSONException e) {
             e.printStackTrace();
@@ -90,6 +92,7 @@ public class ConsultaCCFragment extends Fragment implements Response.Listener<JS
         carajo.putExtra( "ubicacion",ubicacion);
         carajo.putExtra( "requisitos",requisitos);
         carajo.putExtra( "expositor",expositor);
+        carajo.putExtra( "idTaller",idTaller);
 
         startActivity( carajo );
 

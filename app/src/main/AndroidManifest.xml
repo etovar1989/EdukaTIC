@@ -35,6 +35,10 @@
         <activity android:name="com.example.l.EdukaTIC.d3ValCC" />
         <activity android:name="com.example.l.EdukaTIC.d3Resultado" />
         <activity android:name="com.example.l.EdukaTIC.d3ValQR"></activity>
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
     </application>
 
 </manifest>

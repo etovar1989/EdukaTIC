@@ -24,14 +24,14 @@ public class ResultadoConsultaQR extends AppCompatActivity implements Response.L
 
     RequestQueue rq;
     JsonRequest jrq;
-    private TextView tv1,tv2,tv3,tv4,tv5;
+    private TextView tv1,tv2,tv3,tv4;
 
     String datosCC="";
     String nombre = "";
     String taller = "";
     String ubicacion = "";
     String requisitos = "";
-    String expositor = "";
+    String idTaller = "";
     ImageView img1,img2;
 
 
@@ -94,7 +94,7 @@ public class ResultadoConsultaQR extends AppCompatActivity implements Response.L
             taller = ( jsonObject.optString( "nombreTaller" ) );
             ubicacion = ( jsonObject.optString( "salaTaller" ) );
             requisitos = ( jsonObject.optString( "reqTaller" ) );
-            expositor = ( jsonObject.optString( "expositorTaller" ) );
+            idTaller = ( jsonObject.optString( "idTaller" ) );
 
         } catch (JSONException e) {
             e.printStackTrace();
@@ -107,14 +107,14 @@ public class ResultadoConsultaQR extends AppCompatActivity implements Response.L
         tv2 = (TextView)findViewById( R.id.textoTaller );
         tv3 = (TextView)findViewById( R.id.textoUbicacion );
         tv4 = (TextView)findViewById( R.id.textoRequisito );
-        tv5 = (TextView)findViewById( R.id.textoTallerista );
+
 
 
         tv1.setText(nombre);
-        tv2.setText(taller);
+        tv2.setText(idTaller+" - "+taller);
         tv3.setText(ubicacion);
         tv4.setText(requisitos);
-        tv5.setText(expositor);
+
 
 
 
