@@ -12,33 +12,36 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name="com.example.l.EdukaTIC.MainActivity">
+        <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="com.example.l.EdukaTIC.Menu" />
-        <activity android:name="com.example.l.EdukaTIC.validarUsuarios" />
-        <activity android:name="com.example.l.EdukaTIC.consultaCC" />
-        <activity android:name="com.example.l.EdukaTIC.ResutadoConsultaCC" />
-        <activity android:name="com.example.l.EdukaTIC.consultaQR" />
-        <activity android:name="com.example.l.EdukaTIC.ResultadoConsultaQR" />
-        <activity android:name="com.example.l.EdukaTIC.dia1" />
-        <activity android:name="com.example.l.EdukaTIC.d1ValCC" />
-        <activity android:name="com.example.l.EdukaTIC.d1Menu" />
-        <activity android:name="com.example.l.EdukaTIC.d1Resultado" />
-        <activity android:name="com.example.l.EdukaTIC.d1ValQR" />
-        <activity android:name="com.example.l.EdukaTIC.dia3" />
-        <activity android:name="com.example.l.EdukaTIC.d3Menu" />
-        <activity android:name="com.example.l.EdukaTIC.d3ValCC" />
-        <activity android:name="com.example.l.EdukaTIC.d3Resultado" />
-        <activity android:name="com.example.l.EdukaTIC.d3ValQR"></activity>
+        <activity android:name=".Menu" />
+        <activity android:name=".validarUsuarios" />
+        <activity android:name=".consultaCC" />
+        <activity android:name=".ResutadoConsultaCC" />
+        <activity android:name=".consultaQR" />
+        <activity android:name=".ResultadoConsultaQR" />
+        <activity android:name=".dia1" />
+        <activity android:name=".d1ValCC" />
+        <activity android:name=".d1Menu" />
+        <activity android:name=".d1Resultado" />
+        <activity android:name=".d1ValQR" />
+        <activity android:name=".dia3" />
+        <activity android:name=".d3Menu" />
+        <activity android:name=".d3ValCC" />
+        <activity android:name=".d3Resultado" />
+        <activity android:name=".d3ValQR" />
 
         <meta-data
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />
+
+        <activity android:name=".dia2" />
+        <activity android:name=".d2Manana"></activity>
     </application>
 
 </manifest>

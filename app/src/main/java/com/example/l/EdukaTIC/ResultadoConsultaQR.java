@@ -24,7 +24,7 @@ public class ResultadoConsultaQR extends AppCompatActivity implements Response.L
 
     RequestQueue rq;
     JsonRequest jrq;
-    private TextView tv1,tv2,tv3,tv4;
+    private TextView tv1,tv2,tv3,tv4,tv5,tv6,tv7,tv8;
 
     String datosCC="";
     String nombre = "";
@@ -32,6 +32,10 @@ public class ResultadoConsultaQR extends AppCompatActivity implements Response.L
     String ubicacion = "";
     String requisitos = "";
     String idTaller = "";
+    String TallerM1 = "";
+    String TallerM2 = "";
+    String GeneralM1 = "";
+    String GeneralM2 = "";
     ImageView img1,img2;
 
 
@@ -95,6 +99,10 @@ public class ResultadoConsultaQR extends AppCompatActivity implements Response.L
             ubicacion = ( jsonObject.optString( "salaTaller" ) );
             requisitos = ( jsonObject.optString( "reqTaller" ) );
             idTaller = ( jsonObject.optString( "idTaller" ) );
+            TallerM1 = ( jsonObject.optString( "tallerM1" ) );
+            TallerM2 = ( jsonObject.optString( "tallerM2" ) );
+            GeneralM1 = ( jsonObject.optString( "GeneralM1" ) );
+            GeneralM2 = ( jsonObject.optString( "GeneralM2" ) );
 
         } catch (JSONException e) {
             e.printStackTrace();
@@ -107,6 +115,10 @@ public class ResultadoConsultaQR extends AppCompatActivity implements Response.L
         tv2 = (TextView)findViewById( R.id.textoTaller );
         tv3 = (TextView)findViewById( R.id.textoUbicacion );
         tv4 = (TextView)findViewById( R.id.textoRequisito );
+        tv5 = (TextView)findViewById( R.id.txtMV );
+        tv6 = (TextView)findViewById( R.id.txtTV );
+        tv7 = (TextView)findViewById( R.id.txtMM );
+        tv8 = (TextView)findViewById( R.id.txtTM );
 
 
 
@@ -114,6 +126,10 @@ public class ResultadoConsultaQR extends AppCompatActivity implements Response.L
         tv2.setText(idTaller+" - "+taller);
         tv3.setText(ubicacion);
         tv4.setText(requisitos);
+        tv5.setText(TallerM1);
+        tv6.setText(TallerM2);
+        tv7.setText(GeneralM1);
+        tv8.setText(GeneralM2);
 
 
 

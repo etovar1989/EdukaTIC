@@ -80,6 +80,7 @@ public class Menu extends AppCompatActivity {
                 finish();
                 System.exit( 0 );
 
+
             }
         } );
 
