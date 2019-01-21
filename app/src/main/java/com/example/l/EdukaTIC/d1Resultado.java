@@ -27,8 +27,8 @@ import org.json.JSONObject;
 
 public class d1Resultado extends AppCompatActivity implements Response.ErrorListener, Response.Listener<JSONObject> {
 
-    String opc,cc, dato1, tipo;
-    TextView textoTipo;
+    String opc,cc, dato1;
+    TextView textoTipo,resultadoD1;
 
     RequestQueue rq;
     JsonRequest jrq;
@@ -44,21 +44,16 @@ public class d1Resultado extends AppCompatActivity implements Response.ErrorList
         opc = getIntent().getStringExtra( "opc" );
         cc = getIntent().getStringExtra( "cc" );
 
-        //Recupero texto enviado
-        tipo = getIntent().getStringExtra( "tipo" );
-
         //busco texto para cambiar el texto que este muestra
         textoTipo = (TextView) findViewById( R.id.tipoTexto2 );
-        //Envio el texto recuperado del inten
-        textoTipo.setText( tipo );
 
-        if(tipo.equals( "Ingreso" )){
+
+        if(opc.equals( "1" )){
             textoTipo.setTextColor( Color.rgb( 222,119,9 ));
+            textoTipo.setText( "Ingreso" );
+        }else{
+            textoTipo.setText( "Reingreso" );
         }
-
-        //
-        //Toast.makeText( this,"OK "+opc, Toast.LENGTH_SHORT).show();
-        //Toast.makeText( this,"OK "+cc, Toast.LENGTH_SHORT).show();
 
         rq = Volley.newRequestQueue(this);
         validarCedula();
@@ -93,13 +88,6 @@ public class d1Resultado extends AppCompatActivity implements Response.ErrorList
 
     @Override
     public void onResponse(JSONObject response) {
-
-        ImageView img1 = (ImageView) findViewById(R.id.imgLik);
-        img1.setVisibility(View.INVISIBLE);
-
-        ImageView img2 = (ImageView) findViewById(R.id.imgDislik);
-        img2.setVisibility(View.INVISIBLE);
-
         JSONArray jsonArray = response.optJSONArray( "datos" );
         JSONObject jsonObject = null;
 
@@ -107,30 +95,45 @@ public class d1Resultado extends AppCompatActivity implements Response.ErrorList
             jsonObject = jsonArray.getJSONObject( 0 );
 
             dato1 = ( jsonObject.optString( "validador" ) );
+            resultadoD1 = (TextView)findViewById( R.id.txtResultadoD1 );
 
             if(dato1.equals( "1" )){
-                Toast.makeText( this,"Se ha realizado el primer registro con exito", Toast.LENGTH_SHORT).show();
-                img1.setVisibility(View.VISIBLE);
+                //Toast.makeText( this,"Se ha realizado el primer registro con exito", Toast.LENGTH_SHORT).show();
+                resultadoD1.setText( "Este profe puede ingresar a la conferencia" );
             }if(dato1.equals( "2" )){
-                Toast.makeText( this,"Se ha realizado el segundo registro con exito", Toast.LENGTH_SHORT).show();
-                img1.setVisibility(View.VISIBLE);
+                //Toast.makeText( this,"Se ha realizado el segundo registro con exito", Toast.LENGTH_SHORT).show();
+                resultadoD1.setText( "Este profe puede reingresar a la conferencia" );
             }if(dato1.equals( "3" )){
-                Toast.makeText( this,"El profe ya tiene el primer registro", Toast.LENGTH_SHORT).show();
-                img2.setVisibility(View.VISIBLE);
+                //Toast.makeText( this,"El profe ya tiene el primer registro", Toast.LENGTH_SHORT).show();
+                resultadoD1.setText( "Este profe ya tiene registrado el ingreso a la conferencia, si no es correcto, validar con el personal de Eduteka." );
+                resultadoD1.setTextColor( Color.RED);
             }if(dato1.equals( "4" )){
-                Toast.makeText( this,"Se ha realizado el segundo registro con exito", Toast.LENGTH_SHORT).show();
-                img1.setVisibility(View.VISIBLE);
+                //Toast.makeText( this,"Se ha realizado el segundo registro con exito", Toast.LENGTH_SHORT).show();
+                resultadoD1.setText( "Este profe puede ingresar a la conferencia, pero no asistió a la primera parte de la conferencia" );
             }if(dato1.equals( "5" )){
-                Toast.makeText( this,"El profe ya tiene el segundo registro", Toast.LENGTH_SHORT).show();
-                img2.setVisibility(View.VISIBLE);
+                //Toast.makeText( this,"El profe ya tiene el segundo registro", Toast.LENGTH_SHORT).show();
+                resultadoD1.setText( "Este profe ya tiene registrado el ingreso y el reingreso a la conferencia, validar con el personal de Eduteka." );
+                resultadoD1.setTextColor( Color.RED);
             }if(dato1.equals( "6" )){
-                Toast.makeText( this,"El profe no esta registrado para el evento contatarce con el administrador", Toast.LENGTH_SHORT).show();
-                img2.setVisibility(View.VISIBLE);
+                //Toast.makeText( this,"El profe no esta registrado para el evento contatarce con el administrador", Toast.LENGTH_SHORT).show();
+                resultadoD1.setText( "Este profe ya tiene registrado el reingreso y el ingreso a la conferencia, validar con el personal de Eduteka." );
+                resultadoD1.setTextColor( Color.RED);
             }if(dato1.equals( "7" )){
-                Toast.makeText( this,"No hay datos", Toast.LENGTH_SHORT).show();
-                img2.setVisibility(View.VISIBLE);
-            }
+                //Toast.makeText( this,"No hay datos", Toast.LENGTH_SHORT).show();
+                resultadoD1.setText( "No se puede hacer el registro de ingreso por que, primero hizo en registro de reingreso, contactarce con el admistrador del sistema" );
+                resultadoD1.setTextColor( Color.RED);
+            }if(dato1.equals( "8" )){
+                resultadoD1.setText( "No se puede hacer el registro de reingreso por que, ya se realizo este." );
+                resultadoD1.setTextColor( Color.RED);
 
+            }if(dato1.equals( "20" )){
+                resultadoD1.setText( "El profe no esta registrado para el evento contatarce con el administrador." );
+                resultadoD1.setTextColor( Color.RED);
+
+            }if(dato1.equals( "21" )){
+                resultadoD1.setText( "No hay datos." );
+                resultadoD1.setTextColor( Color.RED);
+            }
 
 
         } catch (JSONException e) {

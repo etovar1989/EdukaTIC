@@ -10,44 +10,38 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-public class d1ValCC extends AppCompatActivity {
+public class d2MananaValCC extends AppCompatActivity {
 
     EditText cajaCC;
-    Button consultarCC;
-    String opc;
+    Button d2ConsultarMCC;
+    String opc,titulo;
     ImageView img1;
-    TextView textoTipo;
+    TextView txtDato;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate( savedInstanceState );
-        setContentView( R.layout.activity_d1_val_cc );
+        setContentView( R.layout.activity_d2_manana_val_cc );
 
-        opc = getIntent().getStringExtra( "opc" );
 
         //busco caja de texto para obtener los datos de esta
-        cajaCC = (EditText)findViewById( R.id.txtD1CC );
+        cajaCC = (EditText)findViewById( R.id.txtD2MCC );
+        opc = getIntent().getStringExtra( "opc" );
 
-        //busco texto para cambiar el texto que este muestra
-        textoTipo = (TextView) findViewById( R.id.txtTipo1 );
-
-
-
+        txtDato = (TextView) findViewById( R.id.txtTipo2 );
         if(opc.equals( "1" )){
-            textoTipo.setTextColor( Color.rgb( 222,119,9 ));
-            textoTipo.setText( "Ingreso" );
-        }else{
-            textoTipo.setText( "Reingreso" );
+            titulo= "Ingreso";
+            txtDato.setTextColor( Color.rgb( 83,67,63 ) );
+        }if(opc.equals( "2" )){
+            titulo= "Reingreso";
+            txtDato.setTextColor( Color.rgb( 237,156,23 ) );
         }
 
-
-        consultarCC = (Button) findViewById( R.id.btnD1Consultar );
-        consultarCC.setOnClickListener( new View.OnClickListener() {
+        d2ConsultarMCC = (Button) findViewById( R.id.btnD2MConsultarCC );
+        d2ConsultarMCC.setOnClickListener( new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
-                opc = getIntent().getStringExtra( "opc" );
-                Intent in = new Intent( d1ValCC.this, d1Resultado.class );
+                Intent in = new Intent( d2MananaValCC.this, d2MananaResultado.class );
                 in.putExtra( "cc",cajaCC.getText().toString());
                 in.putExtra( "opc",opc );
                 startActivity( in );
@@ -56,7 +50,9 @@ public class d1ValCC extends AppCompatActivity {
             }
         } );
 
-        img1 = (ImageView) findViewById( R.id.imgB );
+
+
+        img1 = (ImageView) findViewById( R.id.imgB10 );
         img1.setOnClickListener( new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -65,12 +61,5 @@ public class d1ValCC extends AppCompatActivity {
         } );
 
 
-
-
     }
-
-
-
-
-
 }

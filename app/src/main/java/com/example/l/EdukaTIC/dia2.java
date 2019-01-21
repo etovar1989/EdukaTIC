@@ -9,7 +9,7 @@ import android.widget.Toast;
 
 public class dia2 extends AppCompatActivity {
 
-    ImageView img1,img2;
+    ImageView img1,img2,img3;
 
 
     @Override
@@ -33,6 +33,14 @@ public class dia2 extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
+            }
+        } );
+
+        img3 = (ImageView) findViewById( R.id.imgB4 );
+        img3.setOnClickListener( new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                finish();
             }
         } );
 

@@ -9,7 +9,7 @@ import android.widget.ImageView;
 public class dia1 extends AppCompatActivity {
 
     ImageView img1,img2,img3;
-    String opc, tipo;
+    String opc;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,14 +26,11 @@ public class dia1 extends AppCompatActivity {
 
 
                 opc = "1";
-                tipo = "Ingreso";
-
                 com.example.l.EdukaTIC.User usuario = new com.example.l.EdukaTIC.User();
                 usuario.setD1m( opc );
 
                 Intent in = new Intent( dia1.this, d1Menu.class );
                 in.putExtra( "opc",opc );
-                in.putExtra( "tipo",tipo );
                 startActivity( in );
             }
         } );
@@ -45,14 +42,11 @@ public class dia1 extends AppCompatActivity {
 
 
                 opc = "2";
-                tipo = "Reingreso";
-
                 com.example.l.EdukaTIC.User usuario = new com.example.l.EdukaTIC.User();
                 usuario.setD1m( opc );
 
                 Intent in = new Intent( dia1.this, d1Menu.class );
                 in.putExtra( "opc",opc );
-                in.putExtra( "tipo",tipo );
                 startActivity( in );
             }
         } );

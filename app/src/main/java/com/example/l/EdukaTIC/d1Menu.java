@@ -11,7 +11,7 @@ import android.widget.TextView;
 public class d1Menu extends AppCompatActivity {
 
     ImageView img1,img2,img3;
-    String dato1, dato2;
+    String dato1;
     TextView textoTipo;
 
     @Override
@@ -19,22 +19,17 @@ public class d1Menu extends AppCompatActivity {
         super.onCreate( savedInstanceState );
         setContentView( R.layout.activity_d1_menu );
 
-
-        com.example.l.EdukaTIC.User usuario = new com.example.l.EdukaTIC.User();
-        String opcM = usuario.getD1m();
-
         dato1 = getIntent().getStringExtra( "opc" );
-        dato2 = getIntent().getStringExtra( "tipo" );
+
 
         textoTipo = (TextView)findViewById( R.id.txtTipo );
-        textoTipo.setText( dato2 );
 
-        if(dato2.equals( "Ingreso" )){
+        if(dato1.equals( "1" )){
             textoTipo.setTextColor( Color.rgb( 222,119,9 ));
+            textoTipo.setText( "Ingreso" );
+        }else{
+            textoTipo.setText( "Reingreso" );
         }
-
-        //Toast.makeText( this,"OK "+dato1, Toast.LENGTH_SHORT).show();
-
 
 
         img1 = (ImageView) findViewById( R.id.imgValCC );
@@ -44,7 +39,6 @@ public class d1Menu extends AppCompatActivity {
 
                 Intent in = new Intent( d1Menu.this, d1ValCC.class );
                 in.putExtra( "opc",dato1 );
-                in.putExtra( "tipo",dato2 );
                 startActivity( in );
             }
         } );
@@ -57,7 +51,6 @@ public class d1Menu extends AppCompatActivity {
 
                 Intent in = new Intent( d1Menu.this, d1ValQR.class );
                 in.putExtra( "opc",dato1 );
-                in.putExtra( "tipo",dato2 );
                 startActivity( in );
             }
         } );

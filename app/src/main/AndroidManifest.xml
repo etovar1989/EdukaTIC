@@ -41,7 +41,10 @@
             android:resource="@array/preloaded_fonts" />
 
         <activity android:name=".dia2" />
-        <activity android:name=".d2Manana"></activity>
+        <activity android:name=".d2Manana" />
+        <activity android:name=".d2MenuManana" />
+        <activity android:name=".d2MananaValCC" />
+        <activity android:name=".d2MananaResultado"></activity>
     </application>
 
 </manifest>
