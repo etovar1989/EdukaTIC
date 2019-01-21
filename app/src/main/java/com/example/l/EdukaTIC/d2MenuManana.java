@@ -45,6 +45,18 @@ public class d2MenuManana extends AppCompatActivity {
             }
         } );
 
+        img2= (ImageView) findViewById( R.id.imgD2MQR );
+        img2.setOnClickListener( new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                Intent in = new Intent( d2MenuManana.this, d2MananaValQR.class );
+                in.putExtra( "opc",opc );
+                startActivity( in );
+
+            }
+        } );
+
 
         img3 = (ImageView) findViewById( R.id.imgB9 );
         img3.setOnClickListener( new View.OnClickListener() {

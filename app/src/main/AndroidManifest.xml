@@ -44,7 +44,8 @@
         <activity android:name=".d2Manana" />
         <activity android:name=".d2MenuManana" />
         <activity android:name=".d2MananaValCC" />
-        <activity android:name=".d2MananaResultado"></activity>
+        <activity android:name=".d2MananaResultado" />
+        <activity android:name=".d2MananaValQR"></activity>
     </application>
 
 </manifest>

@@ -131,7 +131,7 @@
         app:srcCompat="@drawable/bcc" />
 
     <ImageView
-        android:id="@+id/imageView22"
+        android:id="@+id/imgD2MQR"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
