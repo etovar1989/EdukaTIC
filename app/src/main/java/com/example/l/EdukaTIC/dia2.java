@@ -32,6 +32,8 @@ public class dia2 extends AppCompatActivity {
         img2.setOnClickListener( new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                Intent in = new Intent( dia2.this, d2Tarde.class );
+                startActivity( in );
 
             }
         } );

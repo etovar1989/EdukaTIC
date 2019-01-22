@@ -28,7 +28,7 @@ public class d2MananaResultado extends AppCompatActivity implements Response.Err
     RequestQueue rq;
     JsonRequest jrq;
 
-    ImageView img1,img2, img3;
+    ImageView img3;
 
 
     @Override

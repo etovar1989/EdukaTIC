@@ -45,7 +45,12 @@
         <activity android:name=".d2MenuManana" />
         <activity android:name=".d2MananaValCC" />
         <activity android:name=".d2MananaResultado" />
-        <activity android:name=".d2MananaValQR"></activity>
+        <activity android:name=".d2MananaValQR" />
+        <activity android:name=".d2Tarde" />
+        <activity android:name=".d2TardeMenu" />
+        <activity android:name=".d2TardeValCC" />
+        <activity android:name=".d2TardeResultado" />
+        <activity android:name=".d2TardeValQR"></activity>
     </application>
 
 </manifest>
