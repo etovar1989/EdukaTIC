@@ -130,7 +130,7 @@ public class d3Resultado extends AppCompatActivity implements Response.ErrorList
 
             }if(dato1.equals( "3" )){
                 //Toast.makeText( this,"El profe ya tiene el primer registro", Toast.LENGTH_SHORT).show();
-                texto.setText( "Upss no se realizó el registro, este profe ya tiene registrado a el ingreso a el taller, si no es correcto, validar con el personal de Eduteka." );
+                texto.setText( "Upss no se realizó el registro, este profe ya tiene registrado el ingreso a el taller, si no es correcto, validar con el personal de Eduteka." );
                 texto.setTextColor( Color.RED);
 
             }if(dato1.equals( "4" )){
