@@ -14,7 +14,7 @@ public class d3ValCC extends AppCompatActivity {
     EditText cajaCC;
     Button consultarCC;
     String taller,opc, dato;
-    ImageView img1;
+    ImageView img1,img4;
     TextView textoTipo;
 
 
@@ -57,6 +57,18 @@ public class d3ValCC extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 finish();
+            }
+        } );
+
+        img4 = (ImageView) findViewById( R.id.imgHome16 );
+        img4.setOnClickListener( new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(d3ValCC.this, Menu.class);
+                intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP); // <- Aquí :)
+                startActivity(intent);
+                finish();
+
             }
         } );
 

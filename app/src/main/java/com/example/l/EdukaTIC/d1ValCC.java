@@ -15,7 +15,7 @@ public class d1ValCC extends AppCompatActivity {
     EditText cajaCC;
     Button consultarCC;
     String opc;
-    ImageView img1;
+    ImageView img1,img4;
     TextView textoTipo;
 
     @Override
@@ -60,6 +60,19 @@ public class d1ValCC extends AppCompatActivity {
         img1.setOnClickListener( new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                finish();
+            }
+        } );
+
+
+        img4 = (ImageView) findViewById( R.id.imgHome4 );
+        img4.setOnClickListener( new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                Intent intent = new Intent(d1ValCC.this, Menu.class);
+                intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP); // <- Aquí :)
+                startActivity(intent);
                 finish();
             }
         } );

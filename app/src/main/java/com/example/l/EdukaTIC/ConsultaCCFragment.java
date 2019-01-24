@@ -39,6 +39,14 @@ public class ConsultaCCFragment extends Fragment implements Response.Listener<JS
     String TallerM2 = "";
     String GeneralM1 = "";
     String GeneralM2 = "";
+    String GM1 = "";
+    String GM2 = "";
+    String GT1 = "";
+    String GT2 = "";
+    String GT3 = "";
+    String D2CP1 = "";
+    String D2CP2 = "";
+    String D2CP3 = "";
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -88,6 +96,14 @@ public class ConsultaCCFragment extends Fragment implements Response.Listener<JS
             TallerM2 = ( jsonObject.optString( "tallerM2" ) );
             GeneralM1 = ( jsonObject.optString( "GeneralM1" ) );
             GeneralM2 = ( jsonObject.optString( "GeneralM2" ) );
+            GM1 = ( jsonObject.optString( "GM1" ) );
+            GM2 = ( jsonObject.optString( "GM2" ) );
+            GT1 = ( jsonObject.optString( "GT1" ) );
+            GT2 = ( jsonObject.optString( "GT2" ) );
+            GT3 = ( jsonObject.optString( "GT3" ) );
+            D2CP1 = ( jsonObject.optString( "D2CP1" ) );
+            D2CP2 = ( jsonObject.optString( "D2CP2" ) );
+            D2CP3 = ( jsonObject.optString( "D2CP3" ) );
 
         } catch (JSONException e) {
             e.printStackTrace();
@@ -105,6 +121,14 @@ public class ConsultaCCFragment extends Fragment implements Response.Listener<JS
         carajo.putExtra( "tallerM2",TallerM2);
         carajo.putExtra( "GeneralM1",GeneralM1);
         carajo.putExtra( "GeneralM2",GeneralM2);
+        carajo.putExtra( "GM1",GM1);
+        carajo.putExtra( "GM2",GM2);
+        carajo.putExtra( "GT1",GT1);
+        carajo.putExtra( "GT2",GT2);
+        carajo.putExtra( "GT3",GT3);
+        carajo.putExtra( "D2CP1",D2CP1);
+        carajo.putExtra( "D2CP2",D2CP2);
+        carajo.putExtra( "D2CP3",D2CP3);
 
         startActivity( carajo );
 

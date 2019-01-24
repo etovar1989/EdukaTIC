@@ -21,15 +21,26 @@ public class Menu extends AppCompatActivity {
 
     private final int SOLICTUD_PERMISO_CAMARA = 1;
 
+    User usuario = new User();
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
+
+
         super.onCreate( savedInstanceState );
         setContentView( R.layout.activity_menu );
 
         tv1 = (TextView)findViewById( R.id.txtNombres );
 
-        String dato1 = getIntent().getStringExtra( "nombres" );
-        String dato2 = getIntent().getStringExtra( "apellidos" );
+        //usuario.setNames("Hola");
+        //usuario.setLastN("mundo");
+        String dato1 = usuario.getNames();
+        String dato2 = usuario.getLastN();
+        //String dato1 = getIntent().getStringExtra( "nombres" );
+        //String dato2 = getIntent().getStringExtra( "apellidos" );
+
+
         tv1.setText( dato1+" "+dato2 );
 
 

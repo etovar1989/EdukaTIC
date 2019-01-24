@@ -1,5 +1,6 @@
 package com.example.l.EdukaTIC;
 
+import android.content.Intent;
 import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -33,7 +34,7 @@ public class d1Resultado extends AppCompatActivity implements Response.ErrorList
     RequestQueue rq;
     JsonRequest jrq;
 
-    ImageView img1,img2, img3;
+    ImageView img1,img2, img3,img4;
 
 
     @Override
@@ -63,6 +64,18 @@ public class d1Resultado extends AppCompatActivity implements Response.ErrorList
         img3.setOnClickListener( new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                finish();
+            }
+        } );
+
+        img4 = (ImageView) findViewById( R.id.imgHome3 );
+        img4.setOnClickListener( new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                Intent intent = new Intent(d1Resultado.this, Menu.class);
+                intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP); // <- Aquí :)
+                startActivity(intent);
                 finish();
             }
         } );

@@ -1,5 +1,6 @@
 package com.example.l.EdukaTIC;
 
+import android.content.Intent;
 import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -28,7 +29,7 @@ public class d2MananaResultado extends AppCompatActivity implements Response.Err
     RequestQueue rq;
     JsonRequest jrq;
 
-    ImageView img3;
+    ImageView img3,img4;
 
 
     @Override
@@ -58,6 +59,19 @@ public class d2MananaResultado extends AppCompatActivity implements Response.Err
                 finish();
             }
         } );
+
+        img4 = (ImageView) findViewById( R.id.imgHome9 );
+        img4.setOnClickListener( new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(d2MananaResultado.this, Menu.class);
+                intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP); // <- Aquí :)
+                startActivity(intent);
+                finish();
+
+            }
+        } );
+
     }
 
     private void validarCedula() {

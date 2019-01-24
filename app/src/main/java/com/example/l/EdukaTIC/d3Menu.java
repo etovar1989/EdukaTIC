@@ -11,7 +11,7 @@ import android.widget.Toast;
 public class d3Menu extends AppCompatActivity {
     private TextView tv1;
     String dato1,dato2,dato3;
-    ImageView img1,img2,img3;
+    ImageView img1,img2,img3,img4;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -60,6 +60,19 @@ public class d3Menu extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 finish();
+            }
+        } );
+
+
+        img4 = (ImageView) findViewById( R.id.imgHome15 );
+        img4.setOnClickListener( new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(d3Menu.this, Menu.class);
+                intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP); // <- Aquí :)
+                startActivity(intent);
+                finish();
+
             }
         } );
 

@@ -6,6 +6,42 @@
     android:layout_height="match_parent"
     tools:context=".d1Menu">
 
+    <TextView
+        android:id="@+id/textView66"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:fontFamily="@font/roboto"
+        android:text="Dìa 1 - Sustentaciòn premios"
+        android:textAlignment="center"
+        android:textColor="#00B4DB"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.155" />
+
+    <ImageView
+        android:id="@+id/imgHome2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.697"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.981"
+        app:srcCompat="@drawable/house" />
+
     <ImageView
         android:id="@+id/imageView12"
         android:layout_width="wrap_content"
@@ -32,10 +68,10 @@
         android:layout_marginBottom="8dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.973"
+        app:layout_constraintHorizontal_bias="0.97"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0"
+        app:layout_constraintVertical_bias="0.981"
         app:srcCompat="@drawable/atras" />
 
     <TextView
@@ -46,7 +82,7 @@
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
-        android:text="@string/title_consulta"
+        android:text="Registrar"
         android:textColor="@android:color/darker_gray"
         android:textSize="30sp"
         android:textStyle="bold"
@@ -55,7 +91,7 @@
         app:layout_constraintHorizontal_bias="0.502"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.308" />
+        app:layout_constraintVertical_bias="0.436" />
 
     <TextView
         android:id="@+id/txtTipo"
@@ -71,10 +107,9 @@
         android:textSize="30sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.505"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.198" />
+        app:layout_constraintVertical_bias="0.329" />
 
     <TextView
         android:id="@+id/textView34"
@@ -89,10 +124,10 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.265"
+        app:layout_constraintHorizontal_bias="0.254"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.615" />
+        app:layout_constraintVertical_bias="0.67" />
 
     <TextView
         android:id="@+id/textView35"
@@ -107,10 +142,10 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.719"
+        app:layout_constraintHorizontal_bias="0.707"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.615" />
+        app:layout_constraintVertical_bias="0.67" />
 
     <ImageView
         android:id="@+id/imgValCC"
@@ -122,10 +157,10 @@
         android:layout_marginBottom="8dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.24"
+        app:layout_constraintHorizontal_bias="0.226"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.531"
+        app:layout_constraintVertical_bias="0.591"
         app:srcCompat="@drawable/bcc" />
 
     <ImageView
@@ -141,7 +176,7 @@
         app:layout_constraintHorizontal_bias="0.759"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.531"
+        app:layout_constraintVertical_bias="0.591"
         app:srcCompat="@drawable/bqr" />
 
 </android.support.constraint.ConstraintLayout>

@@ -8,7 +8,7 @@ import android.widget.ImageView;
 
 public class dia1 extends AppCompatActivity {
 
-    ImageView img1,img2,img3;
+    ImageView img1,img2,img3,img4;
     String opc;
 
     @Override
@@ -58,6 +58,19 @@ public class dia1 extends AppCompatActivity {
                 finish();
             }
         } );
+
+        img4 = (ImageView) findViewById( R.id.imgHome );
+        img4.setOnClickListener( new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                Intent in = new Intent( dia1.this, Menu.class );
+                startActivity( in );
+                finish();
+            }
+        } );
+
+
 
     }
 }

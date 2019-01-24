@@ -11,7 +11,7 @@ import android.widget.Toast;
 public class d2TardeMenu extends AppCompatActivity {
     private TextView tv1;
     String dato1,dato2;
-    ImageView img1,img2,img3;
+    ImageView img1,img2,img3,img4;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate( savedInstanceState );
@@ -57,6 +57,18 @@ public class d2TardeMenu extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 finish();
+            }
+        } );
+
+        img4 = (ImageView) findViewById( R.id.imgHome11 );
+        img4.setOnClickListener( new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(d2TardeMenu.this, Menu.class);
+                intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP); // <- Aquí :)
+                startActivity(intent);
+                finish();
+
             }
         } );
 

@@ -1,9 +1,9 @@
 package com.example.l.EdukaTIC;
 
 public class User {
-    private String user,pws,names,lastN, d1m;
+    private static  String user,pws,names,lastN, d1m;
 
-    public String getD1m() {
+    public  String getD1m() {
         return d1m;
     }
 
@@ -44,4 +44,9 @@ public class User {
     public void setLastN(String lastN) {
         this.lastN = lastN;
     }
+
+    public String nameAdnLastN() {
+        return names+" "+lastN ;
+    }
+
 }

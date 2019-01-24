@@ -10,7 +10,7 @@ import android.widget.TextView;
 
 public class d1Menu extends AppCompatActivity {
 
-    ImageView img1,img2,img3;
+    ImageView img1,img2,img3,img4;
     String dato1;
     TextView textoTipo;
 
@@ -63,6 +63,23 @@ public class d1Menu extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 finish();
+            }
+        } );
+
+        img4 = (ImageView) findViewById( R.id.imgHome2 );
+        img4.setOnClickListener( new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+               /*
+                Intent in = new Intent( d1Menu.this, Menu.class );
+                startActivity( in );
+                finish();
+                */
+                Intent intent = new Intent(d1Menu.this, Menu.class);
+                intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP); // <- Aquí :)
+                startActivity(intent);
+                finish();
+
             }
         } );
     }

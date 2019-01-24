@@ -21,7 +21,7 @@ import cz.msebera.android.httpclient.Header;
 
 public class d2Tarde extends AppCompatActivity implements AdapterView.OnItemSelectedListener{
 
-    ImageView img1,img2;
+    ImageView img1,img2,img4;
     private Spinner spT;
     String dato, nombre;
 
@@ -59,6 +59,18 @@ public class d2Tarde extends AppCompatActivity implements AdapterView.OnItemSele
             @Override
             public void onClick(View view) {
                 finish();
+            }
+        } );
+
+        img4 = (ImageView) findViewById( R.id.imgHome10 );
+        img4.setOnClickListener( new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(d2Tarde.this, Menu.class);
+                intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP); // <- Aquí :)
+                startActivity(intent);
+                finish();
+
             }
         } );
 

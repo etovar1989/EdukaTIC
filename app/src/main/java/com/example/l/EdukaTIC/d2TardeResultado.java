@@ -1,5 +1,6 @@
 package com.example.l.EdukaTIC;
 
+import android.content.Intent;
 import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -28,7 +29,7 @@ public class d2TardeResultado extends AppCompatActivity implements Response.Erro
     RequestQueue rq;
     JsonRequest jrq;
 
-    ImageView img1;
+    ImageView img1,img4;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -50,6 +51,19 @@ public class d2TardeResultado extends AppCompatActivity implements Response.Erro
             @Override
             public void onClick(View view) {
                 finish();
+            }
+        } );
+
+
+        img4 = (ImageView) findViewById( R.id.imgHome13 );
+        img4.setOnClickListener( new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(d2TardeResultado.this, Menu.class);
+                intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP); // <- Aquí :)
+                startActivity(intent);
+                finish();
+
             }
         } );
 

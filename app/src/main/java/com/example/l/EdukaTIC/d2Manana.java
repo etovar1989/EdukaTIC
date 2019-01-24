@@ -8,7 +8,7 @@ import android.widget.ImageView;
 
 public class d2Manana extends AppCompatActivity {
 
-    ImageView img1,img2,img3;
+    ImageView img1,img2,img3,img4;
     String opc;
 
 
@@ -48,6 +48,19 @@ public class d2Manana extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 finish();
+            }
+        } );
+
+
+        img4 = (ImageView) findViewById( R.id.imgHome6 );
+        img4.setOnClickListener( new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(d2Manana.this, Menu.class);
+                intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP); // <- Aquí :)
+                startActivity(intent);
+                finish();
+
             }
         } );
 

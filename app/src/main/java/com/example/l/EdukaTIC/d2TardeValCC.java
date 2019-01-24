@@ -14,7 +14,7 @@ public class d2TardeValCC extends AppCompatActivity {
     EditText cajaCC;
     Button consultarCC;
     String taller, dato;
-    ImageView img1,img2;
+    ImageView img1,img4;
     TextView textoTipo;
 
     @Override
@@ -50,13 +50,28 @@ public class d2TardeValCC extends AppCompatActivity {
             }
         } );
 
-        img2 = (ImageView) findViewById( R.id.imgB14 );
-        img2.setOnClickListener( new View.OnClickListener() {
+        img1 = (ImageView) findViewById( R.id.imgB14 );
+        img1.setOnClickListener( new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 finish();
             }
         } );
+
+
+        img4 = (ImageView) findViewById( R.id.imgHome12 );
+        img4.setOnClickListener( new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(d2TardeValCC.this, Menu.class);
+                intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP); // <- Aquí :)
+                startActivity(intent);
+                finish();
+
+            }
+        } );
+
+
 
     }
 }

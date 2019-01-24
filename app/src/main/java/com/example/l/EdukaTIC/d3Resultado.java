@@ -1,5 +1,6 @@
 package com.example.l.EdukaTIC;
 
+import android.content.Intent;
 import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -29,7 +30,7 @@ public class d3Resultado extends AppCompatActivity implements Response.ErrorList
     RequestQueue rq;
     JsonRequest jrq;
 
-    ImageView img1,img2;
+    ImageView img1,img4;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -52,13 +53,27 @@ public class d3Resultado extends AppCompatActivity implements Response.ErrorList
         validarCedula();
 
 
-        img2 = (ImageView) findViewById( R.id.imgB7 );
-        img2.setOnClickListener( new View.OnClickListener() {
+        img1 = (ImageView) findViewById( R.id.imgB7 );
+        img1.setOnClickListener( new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 finish();
             }
         } );
+
+        img4 = (ImageView) findViewById( R.id.imgHome17 );
+        img4.setOnClickListener( new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(d3Resultado.this, Menu.class);
+                intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP); // <- Aquí :)
+                startActivity(intent);
+                finish();
+
+            }
+        } );
+
+
 
 
     }

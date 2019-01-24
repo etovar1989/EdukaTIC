@@ -9,7 +9,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 public class d2MenuManana extends AppCompatActivity {
-    ImageView img1,img2,img3;
+    ImageView img1,img2,img3,img4;
     String opc,titulo;
     TextView txtDato;
 
@@ -63,6 +63,18 @@ public class d2MenuManana extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 finish();
+            }
+        } );
+
+        img4 = (ImageView) findViewById( R.id.imgHome7 );
+        img4.setOnClickListener( new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(d2MenuManana.this, Menu.class);
+                intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP); // <- Aquí :)
+                startActivity(intent);
+                finish();
+
             }
         } );
     }

@@ -15,7 +15,7 @@ public class d2MananaValCC extends AppCompatActivity {
     EditText cajaCC;
     Button d2ConsultarMCC;
     String opc,titulo;
-    ImageView img1;
+    ImageView img1,img4;
     TextView txtDato;
 
     @Override
@@ -57,6 +57,18 @@ public class d2MananaValCC extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 finish();
+            }
+        } );
+
+        img4 = (ImageView) findViewById( R.id.imgHome8 );
+        img4.setOnClickListener( new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(d2MananaValCC.this, Menu.class);
+                intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP); // <- Aquí :)
+                startActivity(intent);
+                finish();
+
             }
         } );
 

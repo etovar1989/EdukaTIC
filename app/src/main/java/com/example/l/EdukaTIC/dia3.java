@@ -21,7 +21,7 @@ import cz.msebera.android.httpclient.Header;
 
 public class dia3 extends AppCompatActivity implements AdapterView.OnItemSelectedListener{
 
-    ImageView img1,img2,img3;
+    ImageView img1,img2,img3,img4;
     private Spinner spT;
     String dato,opc, nombre;
 
@@ -79,6 +79,19 @@ public class dia3 extends AppCompatActivity implements AdapterView.OnItemSelecte
             @Override
             public void onClick(View view) {
                 finish();
+            }
+        } );
+
+
+        img4 = (ImageView) findViewById( R.id.imgHome14 );
+        img4.setOnClickListener( new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(dia3.this, Menu.class);
+                intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP); // <- Aquí :)
+                startActivity(intent);
+                finish();
+
             }
         } );
 

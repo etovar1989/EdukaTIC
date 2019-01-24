@@ -76,6 +76,7 @@ public class SesionFragment extends Fragment implements Response.Listener<JSONOb
         //Toast.makeText( getContext(),"Se ha encontrado el usuario "+ cajaUser.getText().toString(), Toast.LENGTH_LONG).show();
         com.example.l.EdukaTIC.User usuario = new com.example.l.EdukaTIC.User();
 
+
         JSONArray jsonArray = response.optJSONArray( "datos" );
         JSONObject jsonObject = null;
         try {
