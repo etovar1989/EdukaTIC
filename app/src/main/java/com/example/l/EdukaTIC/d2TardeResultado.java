@@ -107,11 +107,11 @@ public class d2TardeResultado extends AppCompatActivity implements Response.Erro
             }if(dato1.equals( "4" )){
                 resultado.setText( "Registro exitoso, esta es la tarcera conferencia paralela a la que ingresa el profe." );
             }if(dato1.equals( "5" )){
-                resultado.setText( "Upss, el profe ya asistió a todas las paralelas del día, si esto no es correcto por favor contactarse con el personal de Eduteka." );
+                resultado.setText( "Upss no se realizó el registro, el profe ya asistió a todas las paralelas del día, si esto no es correcto por favor contactarse con el personal de Eduteka." );
                 resultado.setTextColor( Color.RED);
 
             }if(dato1.equals( "20" )){
-                resultado.setText( "El profe no esta registrado para el evento contatarce con el administrador." );
+                resultado.setText( "El profe no esta registrado para la conferencia, contatarce con el administrador." );
                 resultado.setTextColor( Color.RED);
 
             }if(dato1.equals( "21" )){

@@ -130,7 +130,7 @@ public class d3Resultado extends AppCompatActivity implements Response.ErrorList
 
             }if(dato1.equals( "3" )){
                 //Toast.makeText( this,"El profe ya tiene el primer registro", Toast.LENGTH_SHORT).show();
-                texto.setText( "Upss, este profe ya tiene registrado a el ingreso a el taller, si no es correcto, validar con el personal de Eduteka." );
+                texto.setText( "Upss no se realizó el registro, este profe ya tiene registrado a el ingreso a el taller, si no es correcto, validar con el personal de Eduteka." );
                 texto.setTextColor( Color.RED);
 
             }if(dato1.equals( "4" )){
@@ -139,25 +139,25 @@ public class d3Resultado extends AppCompatActivity implements Response.ErrorList
 
             }if(dato1.equals( "5" )){
                 //Toast.makeText( this,"El profe ya tiene el segundo registro", Toast.LENGTH_SHORT).show();
-                texto.setText( "Upss, este profe ya tiene registrado el ingreso y el reingreso a el taller, validar con el personal de Eduteka." );
+                texto.setText( "Upss no se realizó el registro, este profe ya tiene registrado el ingreso y el reingreso a el taller, validar con el personal de Eduteka." );
                 texto.setTextColor( Color.RED);
 
             }if(dato1.equals( "6" )){
                 //Toast.makeText( this,"El profe no esta registrado para el evento contatarce con el administrador", Toast.LENGTH_SHORT).show();
-                texto.setText( "Upss, este profe ya tiene registrado el reingreso y el ingreso a el taller, validar con el personal de Eduteka." );
+                texto.setText( "Upss no se realizó el registro, este profe ya tiene registrado el reingreso y el ingreso a el taller, validar con el personal de Eduteka." );
                 texto.setTextColor( Color.RED);
 
             }if(dato1.equals( "7" )){
                 //Toast.makeText( this,"No hay datos", Toast.LENGTH_SHORT).show();
-                texto.setText( "Upss, No se puede realizar el registro, el profe no se registro en la mañana, validar con el personal de Eduteka." );
+                texto.setText( "Upss no se realizó el registro, el profe no se registro en la mañana, validar con el personal de Eduteka." );
                 texto.setTextColor( Color.RED);
 
             }if(dato1.equals( "8" )){
-                texto.setText( "Upss, No se puede hacer el registro de reingreso por que, ya se realizo este." );
+                texto.setText( "Upss no se realizó el registro, este profe ya tiene registrado el reingreso, validar con el personal de Eduteka." );
                 texto.setTextColor( Color.RED);
 
             }if(dato1.equals( "20" )){
-                texto.setText( "El profe no esta registrado para el evento contatarce con el administrador." );
+                texto.setText( "El profe no esta registrado para el taller contatarce con el administrador." );
                 texto.setTextColor( Color.RED);
 
             }if(dato1.equals( "21" )){

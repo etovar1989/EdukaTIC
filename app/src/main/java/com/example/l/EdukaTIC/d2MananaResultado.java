@@ -111,25 +111,25 @@ public class d2MananaResultado extends AppCompatActivity implements Response.Err
                 resultado.setText( "Registro exitoso, este profe puede reingresar a la conferencia" );
             }if(dato1.equals( "3" )){
                 //Toast.makeText( this,"El profe ya tiene el primer registro", Toast.LENGTH_SHORT).show();
-                resultado.setText( "Upps, este profe ya tiene registrado el ingreso a la conferencia, si no es correcto, validar con el personal de Eduteka." );
+                resultado.setText( "Upss no se realizó el registro, este profe ya tiene registrado el ingreso a la conferencia, si no es correcto, validar con el personal de Eduteka." );
                 resultado.setTextColor( Color.RED);
             }if(dato1.equals( "4" )){
                 //Toast.makeText( this,"Se ha realizado el segundo registro con exito", Toast.LENGTH_SHORT).show();
                 resultado.setText( "Registro exitoso, este profe puede ingresar a la conferencia, pero no asistió a la primera parte de la conferencia" );
             }if(dato1.equals( "5" )){
                 //Toast.makeText( this,"El profe ya tiene el segundo registro", Toast.LENGTH_SHORT).show();
-                resultado.setText( "Upss, profe ya tiene registrado el ingreso y el reingreso a la conferencia, validar con el personal de Eduteka." );
+                resultado.setText( "Upss no se realizó el registro, este profe ya tiene registrado el ingreso y el reingreso a la conferencia, validar con el personal de Eduteka." );
                 resultado.setTextColor( Color.RED);
             }if(dato1.equals( "6" )){
                 //Toast.makeText( this,"El profe no esta registrado para el evento contatarce con el administrador", Toast.LENGTH_SHORT).show();
-                resultado.setText( "Este profe ya tiene registrado el reingreso y el ingreso a la conferencia, validar con el personal de Eduteka." );
+                resultado.setText( "Upss no se realizó el registro, este profe ya tiene registrado el reingreso y el ingreso a la conferencia, validar con el personal de Eduteka." );
                 resultado.setTextColor( Color.RED);
             }if(dato1.equals( "7" )){
                 //Toast.makeText( this,"No hay datos", Toast.LENGTH_SHORT).show();
-                resultado.setText( "Upss, No se puede realizar el registro, el profe no se registro en la mañana, validar con el personal de Eduteka." );
+                resultado.setText( "Upss no se realizó el registro, el profe no se registro en la mañana, validar con el personal de Eduteka." );
                 resultado.setTextColor( Color.RED);
             }if(dato1.equals( "8" )){
-                resultado.setText( "Upps, No se puede hacer el registro de reingreso por que, ya se realizo este." );
+                resultado.setText( "Upss no se realizó el registro, este profe ya tiene registrado el reingreso, validar con el personal de Eduteka." );
                 resultado.setTextColor( Color.RED);
 
             }if(dato1.equals( "20" )){
