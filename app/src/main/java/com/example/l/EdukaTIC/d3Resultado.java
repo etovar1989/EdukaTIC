@@ -23,9 +23,10 @@ import org.json.JSONObject;
 
 public class d3Resultado extends AppCompatActivity implements Response.ErrorListener, Response.Listener<JSONObject> {
 
-    String opc,cc, taller,nombre;
+    String opc,cc, taller,nombre,titulo;
     TextView texto, nom_taller;
     String dato1="";
+    TextView txtDato;
 
     RequestQueue rq;
     JsonRequest jrq;
@@ -73,6 +74,19 @@ public class d3Resultado extends AppCompatActivity implements Response.ErrorList
             }
         } );
 
+        opc = getIntent().getStringExtra( "opc" );
+
+        txtDato = (TextView) findViewById( R.id.txtD3Tipo );
+        if(opc.equals( "1" )){
+            titulo= "Ingreso";
+            txtDato.setText( titulo );
+            txtDato.setTextColor( Color.rgb( 83,67,63 ) );
+        }if(opc.equals( "2" )){
+            titulo= "Reingreso";
+            txtDato.setText( titulo );
+            txtDato.setTextColor( Color.rgb( 237,156,23 ) );
+        }
+
 
 
 
@@ -108,38 +122,38 @@ public class d3Resultado extends AppCompatActivity implements Response.ErrorList
 
             if(dato1.equals( "1" )){
                 //Toast.makeText( this,"Se ha realizado el primer registro con exito", Toast.LENGTH_SHORT).show();
-                texto.setText( "Este profe puede ingresar a el taller" );
+                texto.setText( "Registro exitoso, este profe puede ingresar a el taller" );
 
             }if(dato1.equals( "2" )){
                 //Toast.makeText( this,"Se ha realizado el segundo registro con exito", Toast.LENGTH_SHORT).show();
-                texto.setText( "Este profe puede reingresar a el taller" );
+                texto.setText( "Registro exitoso, este profe puede reingresar a el taller" );
 
             }if(dato1.equals( "3" )){
                 //Toast.makeText( this,"El profe ya tiene el primer registro", Toast.LENGTH_SHORT).show();
-                texto.setText( "Este profe ya tiene registrado a el ingreso a el taller, si no es correcto, validar con el personal de Eduteka." );
+                texto.setText( "Upss, este profe ya tiene registrado a el ingreso a el taller, si no es correcto, validar con el personal de Eduteka." );
                 texto.setTextColor( Color.RED);
 
             }if(dato1.equals( "4" )){
                 //Toast.makeText( this,"Se ha realizado el segundo registro con exito", Toast.LENGTH_SHORT).show();
-                texto.setText( "Este profe puede ingresar a el taller, pero no asistió a la primera parte del taller" );
+                texto.setText( "Registro exitoso, este profe puede ingresar a el taller, pero no asistió a la primera parte del taller" );
 
             }if(dato1.equals( "5" )){
                 //Toast.makeText( this,"El profe ya tiene el segundo registro", Toast.LENGTH_SHORT).show();
-                texto.setText( "Este profe ya tiene registrado el ingreso y el reingreso a el taller, validar con el personal de Eduteka." );
+                texto.setText( "Upss, este profe ya tiene registrado el ingreso y el reingreso a el taller, validar con el personal de Eduteka." );
                 texto.setTextColor( Color.RED);
 
             }if(dato1.equals( "6" )){
                 //Toast.makeText( this,"El profe no esta registrado para el evento contatarce con el administrador", Toast.LENGTH_SHORT).show();
-                texto.setText( "Este profe ya tiene registrado el reingreso y el ingreso a el taller, validar con el personal de Eduteka." );
+                texto.setText( "Upss, este profe ya tiene registrado el reingreso y el ingreso a el taller, validar con el personal de Eduteka." );
                 texto.setTextColor( Color.RED);
 
             }if(dato1.equals( "7" )){
                 //Toast.makeText( this,"No hay datos", Toast.LENGTH_SHORT).show();
-                texto.setText( "No se puede hacer el registro de ingreso por que, primero hizo en registro de reingreso, contactarce con el admistrador del sistema" );
+                texto.setText( "Upss, No se puede realizar el registro, el profe no se registro en la mañana, validar con el personal de Eduteka." );
                 texto.setTextColor( Color.RED);
 
             }if(dato1.equals( "8" )){
-                texto.setText( "No se puede hacer el registro de reingreso por que, ya se realizo este." );
+                texto.setText( "Upss, No se puede hacer el registro de reingreso por que, ya se realizo este." );
                 texto.setTextColor( Color.RED);
 
             }if(dato1.equals( "20" )){

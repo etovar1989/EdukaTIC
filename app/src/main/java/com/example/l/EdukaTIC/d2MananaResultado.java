@@ -105,20 +105,20 @@ public class d2MananaResultado extends AppCompatActivity implements Response.Err
 
             if(dato1.equals( "1" )){
                 //Toast.makeText( this,"Se ha realizado el primer registro con exito", Toast.LENGTH_SHORT).show();
-                resultado.setText( "Este profe puede ingresar a la conferencia" );
+                resultado.setText( "Registro exitoso, este profe puede ingresar a la conferencia" );
             }if(dato1.equals( "2" )){
                 //Toast.makeText( this,"Se ha realizado el segundo registro con exito", Toast.LENGTH_SHORT).show();
-                resultado.setText( "Este profe puede reingresar a la conferencia" );
+                resultado.setText( "Registro exitoso, este profe puede reingresar a la conferencia" );
             }if(dato1.equals( "3" )){
                 //Toast.makeText( this,"El profe ya tiene el primer registro", Toast.LENGTH_SHORT).show();
-                resultado.setText( "Este profe ya tiene registrado el ingreso a la conferencia, si no es correcto, validar con el personal de Eduteka." );
+                resultado.setText( "Upps, este profe ya tiene registrado el ingreso a la conferencia, si no es correcto, validar con el personal de Eduteka." );
                 resultado.setTextColor( Color.RED);
             }if(dato1.equals( "4" )){
                 //Toast.makeText( this,"Se ha realizado el segundo registro con exito", Toast.LENGTH_SHORT).show();
-                resultado.setText( "Este profe puede ingresar a la conferencia, pero no asistió a la primera parte de la conferencia" );
+                resultado.setText( "Registro exitoso, este profe puede ingresar a la conferencia, pero no asistió a la primera parte de la conferencia" );
             }if(dato1.equals( "5" )){
                 //Toast.makeText( this,"El profe ya tiene el segundo registro", Toast.LENGTH_SHORT).show();
-                resultado.setText( "Este profe ya tiene registrado el ingreso y el reingreso a la conferencia, validar con el personal de Eduteka." );
+                resultado.setText( "Upss, profe ya tiene registrado el ingreso y el reingreso a la conferencia, validar con el personal de Eduteka." );
                 resultado.setTextColor( Color.RED);
             }if(dato1.equals( "6" )){
                 //Toast.makeText( this,"El profe no esta registrado para el evento contatarce con el administrador", Toast.LENGTH_SHORT).show();
@@ -126,14 +126,14 @@ public class d2MananaResultado extends AppCompatActivity implements Response.Err
                 resultado.setTextColor( Color.RED);
             }if(dato1.equals( "7" )){
                 //Toast.makeText( this,"No hay datos", Toast.LENGTH_SHORT).show();
-                resultado.setText( "No se puede hacer el registro de ingreso por que, primero hizo en registro de reingreso, contactarce con el admistrador del sistema" );
+                resultado.setText( "Upss, No se puede realizar el registro, el profe no se registro en la mañana, validar con el personal de Eduteka." );
                 resultado.setTextColor( Color.RED);
             }if(dato1.equals( "8" )){
-                resultado.setText( "No se puede hacer el registro de reingreso por que, ya se realizo este." );
+                resultado.setText( "Upps, No se puede hacer el registro de reingreso por que, ya se realizo este." );
                 resultado.setTextColor( Color.RED);
 
             }if(dato1.equals( "20" )){
-                resultado.setText( "El profe no esta registrado para el evento contatarce con el administrador." );
+                resultado.setText( "El profe no esta registrado para la conferencia, contatarce con el administrador." );
                 resultado.setTextColor( Color.RED);
 
             }if(dato1.equals( "21" )){

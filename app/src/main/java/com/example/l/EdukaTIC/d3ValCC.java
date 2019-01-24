@@ -1,6 +1,7 @@
 package com.example.l.EdukaTIC;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -13,9 +14,10 @@ public class d3ValCC extends AppCompatActivity {
 
     EditText cajaCC;
     Button consultarCC;
-    String taller,opc, dato;
+    String taller,opc, dato, titulo;
     ImageView img1,img4;
     TextView textoTipo;
+    TextView txtDato;
 
 
     @Override
@@ -33,7 +35,20 @@ public class d3ValCC extends AppCompatActivity {
         //Envio el texto recuperado del inten
         textoTipo.setText( dato );
 
-        //Toast.makeText( this,"Opcion"+taller, Toast.LENGTH_SHORT).show();
+        opc = getIntent().getStringExtra( "opc" );
+
+        txtDato = (TextView) findViewById( R.id.txtD3Tipo );
+        if(opc.equals( "1" )){
+            titulo= "Ingreso";
+            txtDato.setText( titulo );
+            txtDato.setTextColor( Color.rgb( 83,67,63 ) );
+        }if(opc.equals( "2" )){
+            titulo= "Reingreso";
+            txtDato.setText( titulo );
+            txtDato.setTextColor( Color.rgb( 237,156,23 ) );
+        }
+
+
 
         consultarCC = (Button) findViewById( R.id.btnD1Consultar );
         consultarCC.setOnClickListener( new View.OnClickListener() {

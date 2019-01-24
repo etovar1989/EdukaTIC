@@ -31,9 +31,11 @@ public class d2MananaValCC extends AppCompatActivity {
         txtDato = (TextView) findViewById( R.id.txtTipo2 );
         if(opc.equals( "1" )){
             titulo= "Ingreso";
+            txtDato.setText( titulo );
             txtDato.setTextColor( Color.rgb( 83,67,63 ) );
         }if(opc.equals( "2" )){
             titulo= "Reingreso";
+            txtDato.setText( titulo );
             txtDato.setTextColor( Color.rgb( 237,156,23 ) );
         }
 

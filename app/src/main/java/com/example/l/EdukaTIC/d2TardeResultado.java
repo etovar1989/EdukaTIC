@@ -99,15 +99,15 @@ public class d2TardeResultado extends AppCompatActivity implements Response.Erro
             dato1 = ( jsonObject.optString( "validador" ) );
 
             if(dato1.equals( "1" )){
-                resultado.setText( "Esta es la primera conferencia paralela a la que ingresa el profe." );
+                resultado.setText( "Registro exitoso, esta es la primera conferencia paralela a la que ingresa el profe." );
             }if(dato1.equals( "2" )){
-                resultado.setText( "Esta es la primera conferencia paralela a la que ingresa el profe." );
+                resultado.setText( "Registro exitoso, esta es la primera conferencia paralela a la que ingresa el profe." );
             }if(dato1.equals( "3" )){
-                resultado.setText( "Esta es la segunda conferencia paralela a la que ingresa el profe." );
+                resultado.setText( "Registro exitoso, esta es la segunda conferencia paralela a la que ingresa el profe." );
             }if(dato1.equals( "4" )){
-                resultado.setText( "Esta es la tarcera conferencia paralela a la que ingresa el profe." );
+                resultado.setText( "Registro exitoso, esta es la tarcera conferencia paralela a la que ingresa el profe." );
             }if(dato1.equals( "5" )){
-                resultado.setText( "El profe ya asistió a todas las paralelas del día, si esto no es correcto por favor contactarse con el personal de Eduteka." );
+                resultado.setText( "Upss, el profe ya asistió a todas las paralelas del día, si esto no es correcto por favor contactarse con el personal de Eduteka." );
                 resultado.setTextColor( Color.RED);
 
             }if(dato1.equals( "20" )){
