@@ -4,11 +4,13 @@ import android.Manifest;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.PackageManager;
+import android.net.Uri;
 import android.support.annotation.NonNull;
 import android.support.v4.app.ActivityCompat;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -17,7 +19,7 @@ import android.widget.Toast;
 public class Menu extends AppCompatActivity {
 
     private TextView tv1;
-    ImageView img1,img2,img3,img4,img5;
+    ImageView img1,img2,img3,img4;
 
     private final int SOLICTUD_PERMISO_CAMARA = 1;
 
@@ -84,17 +86,6 @@ public class Menu extends AppCompatActivity {
             }
         } );
 
-        img5 = (ImageView) findViewById( R.id.imgClose2 );
-        img5.setOnClickListener( new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                finish();
-                System.exit( 0 );
-
-
-            }
-        } );
-
 
         if(ActivityCompat.checkSelfPermission( this, Manifest.permission.CAMERA ) == PackageManager.PERMISSION_GRANTED){
             Toast.makeText( this,"Gracias por tu confianza, que la fuerza te acompañe", Toast.LENGTH_SHORT).show();
@@ -106,8 +97,47 @@ public class Menu extends AppCompatActivity {
 
     }//final de onCreate
 
+    /* Barra de menu de la apk*/
+    public boolean onCreateOptionsMenu (android.view.Menu mimenu){
+        getMenuInflater().inflate(R.menu.menu, mimenu);
+        return true;
+    }
+
+    public boolean onOptionsItemSelected(MenuItem opcion_menu){
+        int id=opcion_menu.getItemId();
+
+        if(id==R.id.btnInicio){
+            return true;
+        }
+        if(id==R.id.btnConsultar){
+            final Intent m = new Intent(Menu.this, validarUsuarios.class);
+            startActivity(m);
+            return true;
+        }
+        if(id==R.id.btnDia1){
+            final Intent m = new Intent(Menu.this, dia1.class);
+            startActivity(m);
+            return true;
+        }
+        if(id==R.id.btnDia2){
+            final Intent m = new Intent(Menu.this, dia2.class);
+            startActivity(m);
+            return true;
+        }
+        if(id==R.id.btnDia3){
+            final Intent m = new Intent(Menu.this, dia3.class);
+            startActivity(m);
+            return true;
+        }
+        if(id==R.id.btnSalir){
+            finish();
+            System.exit( 0 );
+        }
+        return super.onOptionsItemSelected(opcion_menu);
+    }
 
 
+    /*Fin  Barra de menu de la apk*/
 
     private void solictarPermisoCamara() {
         //0. pedir permiso con cuadros de dialogo del sistema

@@ -50,7 +50,7 @@
         <activity android:name=".d2TardeMenu" />
         <activity android:name=".d2TardeValCC" />
         <activity android:name=".d2TardeResultado" />
-        <activity android:name=".d2TardeValQR"></activity>
+        <activity android:name=".d2TardeValQR" />
     </application>
 
 </manifest>

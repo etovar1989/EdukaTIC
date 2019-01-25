@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/menu"
+        android:icon="@drawable/mas"
+        android:title="mas"
+        app:showAsAction="always">
+        <menu>
+            <item
+                android:id="@+id/btnInicio"
+                android:icon="@drawable/house"
+                android:title="Incio"
+                ></item>
+            <item
+                android:id="@+id/btnConsultar"
+                android:icon="@drawable/bus"
+                android:title="Consultar"
+                ></item>
+            <item
+                android:id="@+id/btnDia1"
+                android:icon="@drawable/d1"
+                android:title="Dìa 1"
+                ></item>
+            <item
+                android:id="@+id/btnDia2"
+                android:icon="@drawable/d2"
+                android:title="Dìa 2"
+                ></item>
+            <item
+                android:id="@+id/btnDia3"
+                android:icon="@drawable/d3"
+                android:title="Dìa 3"
+                ></item>
+            <item
+                android:id="@+id/btnSalir"
+                android:icon="@drawable/exit"
+                android:title="Salir "
+                ></item>
+
+        </menu>
+
+    </item>
+
+
+</menu>
