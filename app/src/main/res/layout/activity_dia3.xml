@@ -59,7 +59,7 @@
 
     <Spinner
         android:id="@+id/spTalleres"
-        android:layout_width="368dp"
+        android:layout_width="339dp"
         android:layout_height="39dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
@@ -69,10 +69,10 @@
         android:spinnerMode="dialog"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.517"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.412" />
+        app:layout_constraintVertical_bias="0.414" />
 
     <ImageView
         android:id="@+id/imgD3M1"

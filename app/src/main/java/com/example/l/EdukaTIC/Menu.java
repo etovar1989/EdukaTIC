@@ -148,7 +148,7 @@ public class Menu extends AppCompatActivity {
 
     private void explicarPermiso() {
         Toast.makeText( this,"Los permisos son requeridos para el correcto funcionamiento de la aplicación.", Toast.LENGTH_SHORT).show();
-        alertDialogoBasico();
+        //alertDialogoBasico();
     }
 
     private void alertDialogoBasico() {

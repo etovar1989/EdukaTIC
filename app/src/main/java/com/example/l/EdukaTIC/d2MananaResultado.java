@@ -134,6 +134,10 @@ public class d2MananaResultado extends AppCompatActivity implements Response.Err
                 resultado.setText( "Upss no se realizó el registro, este profe ya tiene registrado el reingreso, validar con el personal de Eduteka." );
                 resultado.setTextColor( Color.RED);
 
+            }if(dato1.equals( "9" )){
+                resultado.setText( "Upss no se realizó el registro, el profe no se registro en la mañana, validar con el personal de Eduteka." );
+                resultado.setTextColor( Color.RED);
+
             }if(dato1.equals( "20" )){
                 resultado.setText( "El profe no esta registrado para la conferencia, contatarce con el administrador." );
                 resultado.setTextColor( Color.RED);
