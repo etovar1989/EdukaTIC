@@ -18,7 +18,7 @@ public class d3ValCC extends AppCompatActivity {
     String taller,opc, dato, titulo;
     ImageView img1,img4;
     TextView textoTipo;
-    TextView txtDato;
+    TextView txtDato,def;
 
 
     @Override
@@ -39,14 +39,17 @@ public class d3ValCC extends AppCompatActivity {
         opc = getIntent().getStringExtra( "opc" );
 
         txtDato = (TextView) findViewById( R.id.txtD3Tipo );
+        def = (TextView)findViewById( R.id.txtDef2 );
         if(opc.equals( "1" )){
             titulo= "Ingreso";
             txtDato.setText( titulo );
             txtDato.setTextColor( Color.rgb( 83,67,63 ) );
+            def.setText( "Mañana" );
         }if(opc.equals( "2" )){
             titulo= "Reingreso";
             txtDato.setText( titulo );
             txtDato.setTextColor( Color.rgb( 237,156,23 ) );
+            def.setText( "Tarde" );
         }
 
 

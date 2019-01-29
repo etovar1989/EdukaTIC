@@ -14,7 +14,7 @@ public class d3Menu extends AppCompatActivity {
     private TextView tv1;
     String dato1,dato2,dato3, titulo;
     ImageView img1,img2,img3,img4;
-    TextView txtDato;
+    TextView txtDato,def;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,14 +33,17 @@ public class d3Menu extends AppCompatActivity {
         dato2 = getIntent().getStringExtra( "opc" );
 
         txtDato = (TextView) findViewById( R.id.txtD3Tipo );
+        def = (TextView)findViewById( R.id.txtDef );
         if(dato2.equals( "1" )){
             titulo= "Ingreso";
             txtDato.setText( titulo );
             txtDato.setTextColor( Color.rgb( 83,67,63 ) );
+            def.setText( "Mañana" );
         }if(dato2.equals( "2" )){
             titulo= "Reingreso";
             txtDato.setText( titulo );
             txtDato.setTextColor( Color.rgb( 237,156,23 ) );
+            def.setText( "Tarde" );
         }
 
         img1= (ImageView) findViewById( R.id.imgValCC2 );

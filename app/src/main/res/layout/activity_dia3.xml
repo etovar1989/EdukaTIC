@@ -33,7 +33,7 @@
         android:fontFamily="@font/roboto"
         android:text="Dìa 3 - Talleres"
         android:textColor="#FF4969"
-        android:textSize="30sp"
+        android:textSize="18sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

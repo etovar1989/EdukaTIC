@@ -27,7 +27,7 @@ public class d3Resultado extends AppCompatActivity implements Response.ErrorList
     String opc,cc, taller,nombre,titulo;
     TextView texto, nom_taller;
     String dato1="";
-    TextView txtDato;
+    TextView txtDato, def;
 
     RequestQueue rq;
     JsonRequest jrq;
@@ -80,14 +80,17 @@ public class d3Resultado extends AppCompatActivity implements Response.ErrorList
         opc = getIntent().getStringExtra( "opc" );
 
         txtDato = (TextView) findViewById( R.id.txtD3Tipo );
+        def = (TextView)findViewById( R.id.txtDef3 );
         if(opc.equals( "1" )){
             titulo= "Ingreso";
             txtDato.setText( titulo );
             txtDato.setTextColor( Color.rgb( 83,67,63 ) );
+            def.setText( "Mañana" );
         }if(opc.equals( "2" )){
             titulo= "Reingreso";
             txtDato.setText( titulo );
             txtDato.setTextColor( Color.rgb( 237,156,23 ) );
+            def.setText( "Tarde" );
         }
 
 
