@@ -3,6 +3,7 @@ package com.example.l.EdukaTIC;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -62,6 +63,8 @@ public class d2Tarde extends AppCompatActivity implements AdapterView.OnItemSele
             }
         } );
 
+
+        /*
         img4 = (ImageView) findViewById( R.id.imgHome10 );
         img4.setOnClickListener( new View.OnClickListener() {
             @Override
@@ -73,7 +76,7 @@ public class d2Tarde extends AppCompatActivity implements AdapterView.OnItemSele
 
             }
         } );
-
+*/
 
 
     }
@@ -134,4 +137,64 @@ public class d2Tarde extends AppCompatActivity implements AdapterView.OnItemSele
     public void onNothingSelected(AdapterView<?> adapterView) {
 
     }
+
+
+
+    /* Barra de menu de la apk*/
+    public boolean onCreateOptionsMenu (android.view.Menu mimenu){
+        getMenuInflater().inflate(R.menu.menu, mimenu);
+        return true;
+    }
+
+    public boolean onOptionsItemSelected(MenuItem opcion_menu){
+        int id=opcion_menu.getItemId();
+
+        if(id==R.id.btnInicio){
+            Intent m = new Intent(d2Tarde.this, Menu.class);
+            m.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP); // <- Aquí :)
+            startActivity(m);
+            finish();
+            return true;
+        }
+        if(id==R.id.btnConsultar){
+            Intent m = new Intent(d2Tarde.this, validarUsuarios.class);
+            m.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP); // <- Aquí :)
+            startActivity(m);
+            finish();
+            return true;
+        }
+        if(id==R.id.btnDia1){
+
+            Intent m = new Intent(d2Tarde.this, dia1.class);
+            m.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP); // <- Aquí :)
+            startActivity(m);
+            finish();
+            return true;
+        }
+        if(id==R.id.btnDia2){
+            Intent m = new Intent(d2Tarde.this, dia2.class);
+            m.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP); // <- Aquí :)
+            startActivity(m);
+            finish();
+            return true;
+        }
+        if(id==R.id.btnDia3){
+            Intent m = new Intent(d2Tarde.this, dia3.class);
+            m.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP); // <- Aquí :)
+            startActivity(m);
+            finish();
+            return true;
+        }
+        if(id==R.id.btnSalir){
+            finish();
+            System.exit( 0 );
+        }
+        return super.onOptionsItemSelected(opcion_menu);
+    }
+
+
+    /*Fin  Barra de menu de la apk*/
+
+
+
 }

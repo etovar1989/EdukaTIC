@@ -116,7 +116,7 @@
         android:text="Dìa 1 - Sustentaciòn premios"
         android:textAlignment="center"
         android:textColor="#00B4DB"
-        android:textSize="30sp"
+        android:textSize="18sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

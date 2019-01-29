@@ -67,6 +67,7 @@ public class d2MenuManana extends AppCompatActivity {
             }
         } );
 
+        /*
         img4 = (ImageView) findViewById( R.id.imgHome7 );
         img4.setOnClickListener( new View.OnClickListener() {
             @Override
@@ -78,6 +79,9 @@ public class d2MenuManana extends AppCompatActivity {
 
             }
         } );
+
+
+        */
     }
 
 

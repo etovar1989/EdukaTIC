@@ -52,7 +52,7 @@ public class d2Manana extends AppCompatActivity {
             }
         } );
 
-
+/*
         img4 = (ImageView) findViewById( R.id.imgHome6 );
         img4.setOnClickListener( new View.OnClickListener() {
             @Override
@@ -64,7 +64,7 @@ public class d2Manana extends AppCompatActivity {
 
             }
         } );
-
+*/
 
     }
 

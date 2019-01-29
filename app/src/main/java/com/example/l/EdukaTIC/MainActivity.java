@@ -10,7 +10,7 @@ import android.widget.ImageView;
 
 public class MainActivity extends AppCompatActivity {
 
-    ImageView img1;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,13 +21,7 @@ public class MainActivity extends AppCompatActivity {
         fm.beginTransaction().replace( R.id.escenario,  new SesionFragment()).commit();
 
 
-        img1 = (ImageView) findViewById( R.id.imgClose );
-        img1.setOnClickListener( new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                finish();
-            }
-        } );
+
     }
 
 

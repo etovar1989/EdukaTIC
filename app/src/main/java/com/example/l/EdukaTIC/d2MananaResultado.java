@@ -61,6 +61,7 @@ public class d2MananaResultado extends AppCompatActivity implements Response.Err
             }
         } );
 
+        /*
         img4 = (ImageView) findViewById( R.id.imgHome9 );
         img4.setOnClickListener( new View.OnClickListener() {
             @Override
@@ -72,7 +73,7 @@ public class d2MananaResultado extends AppCompatActivity implements Response.Err
 
             }
         } );
-
+*/
     }
 
     private void validarCedula() {

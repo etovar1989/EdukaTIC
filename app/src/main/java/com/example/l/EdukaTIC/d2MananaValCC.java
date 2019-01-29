@@ -62,7 +62,7 @@ public class d2MananaValCC extends AppCompatActivity {
                 finish();
             }
         } );
-
+/*
         img4 = (ImageView) findViewById( R.id.imgHome8 );
         img4.setOnClickListener( new View.OnClickListener() {
             @Override
@@ -74,7 +74,7 @@ public class d2MananaValCC extends AppCompatActivity {
 
             }
         } );
-
+*/
 
     }
 
