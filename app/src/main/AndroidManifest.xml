@@ -52,7 +52,10 @@
         <activity android:name=".dia2.d2TardeResultado" />
         <activity android:name=".dia2.d2TardeValQR" />
         <activity android:name=".consultar.pantallaError" />
-        <activity android:name=".peticiones_menu"></activity>
+        <activity android:name=".peticiones_menu" />
+        <activity android:name=".peticiones_datalle" />
+        <activity android:name=".peticiones_resultado" />
+        <activity android:name=".peticiones_consulta"></activity>
     </application>
 
 </manifest>

@@ -23,7 +23,7 @@ import com.example.l.EdukaTIC.dia3.dia3;
 public class Menu extends AppCompatActivity {
 
     private TextView tv1;
-    ImageView img1,img2,img3,img4,img5;
+    ImageView img1,img2,img3,img4,img5,img6,img7;
 
     private final int SOLICTUD_PERMISO_CAMARA = 1;
 
@@ -98,6 +98,32 @@ public class Menu extends AppCompatActivity {
 
                 Intent in = new Intent( Menu.this, peticiones_menu.class );
                 startActivity( in );
+            }
+        } );
+
+
+        img6 = (ImageView) findViewById( R.id.imgPconOk );
+        img6.setOnClickListener( new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent in = new Intent( Menu.this, peticiones_consulta.class );
+                in.putExtra( "estado","1");
+                startActivity( in );
+                finish();
+
+            }
+        } );
+
+
+        img7 = (ImageView) findViewById( R.id.imgPconCancel );
+        img7.setOnClickListener( new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent in = new Intent( Menu.this, peticiones_consulta.class );
+                in.putExtra( "estado","2");
+                startActivity( in );
+                finish();
+
             }
         } );
 
