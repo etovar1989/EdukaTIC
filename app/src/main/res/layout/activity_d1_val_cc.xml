@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".d1ValCC">
+    tools:context=".dia1.d1ValCC">
 
     <TextView
         android:id="@+id/textView71"

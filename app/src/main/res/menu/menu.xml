@@ -11,7 +11,7 @@
             <item
                 android:id="@+id/btnInicio"
                 android:icon="@drawable/house"
-                android:title="Incio"
+                android:title="Inicio"
                 ></item>
             <item
                 android:id="@+id/btnConsultar"

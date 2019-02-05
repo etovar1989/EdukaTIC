@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".d2Tarde">
+    tools:context=".dia2.d2Tarde">
 
     <TextView
         android:id="@+id/textView75"

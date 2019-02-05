@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".d2MenuManana">
+    tools:context=".dia2.d2MenuManana">
 
     <TextView
         android:id="@+id/textView57"
@@ -15,7 +15,7 @@
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
         android:fontFamily="@font/roboto"
-        android:text="Dìa 2 - Canferencia principal"
+        android:text="Dìa 2 - Conferencia principal"
         android:textColor="#87CA33"
         android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"

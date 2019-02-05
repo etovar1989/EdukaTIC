@@ -5,7 +5,7 @@
     android:id="@+id/contenido"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".consultaCC">
+    tools:context=".consultar.consultaCC">
 
     <ImageView
         android:id="@+id/imgBk"

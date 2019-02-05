@@ -20,37 +20,39 @@
             </intent-filter>
         </activity>
         <activity android:name=".Menu" />
-        <activity android:name=".validarUsuarios" />
-        <activity android:name=".consultaCC" />
-        <activity android:name=".ResutadoConsultaCC" />
-        <activity android:name=".consultaQR" />
-        <activity android:name=".ResultadoConsultaQR" />
-        <activity android:name=".dia1" />
-        <activity android:name=".d1ValCC" />
-        <activity android:name=".d1Menu" />
-        <activity android:name=".d1Resultado" />
-        <activity android:name=".d1ValQR" />
-        <activity android:name=".dia3" />
-        <activity android:name=".d3Menu" />
-        <activity android:name=".d3ValCC" />
-        <activity android:name=".d3Resultado" />
-        <activity android:name=".d3ValQR" />
+        <activity android:name=".consultar.validarUsuarios" />
+        <activity android:name=".consultar.consultaCC" />
+        <activity android:name=".consultar.ResutadoConsultaCC" />
+        <activity android:name=".consultar.consultaQR" />
+        <activity android:name=".consultar.ResultadoConsultaQR" />
+        <activity android:name=".dia1.dia1" />
+        <activity android:name=".dia1.d1ValCC" />
+        <activity android:name=".dia1.d1Menu" />
+        <activity android:name=".dia1.d1Resultado" />
+        <activity android:name=".dia1.d1ValQR" />
+        <activity android:name=".dia3.dia3" />
+        <activity android:name=".dia3.d3Menu" />
+        <activity android:name=".dia3.d3ValCC" />
+        <activity android:name=".dia3.d3Resultado" />
+        <activity android:name=".dia3.d3ValQR" />
 
         <meta-data
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />
 
-        <activity android:name=".dia2" />
-        <activity android:name=".d2Manana" />
-        <activity android:name=".d2MenuManana" />
-        <activity android:name=".d2MananaValCC" />
-        <activity android:name=".d2MananaResultado" />
-        <activity android:name=".d2MananaValQR" />
-        <activity android:name=".d2Tarde" />
-        <activity android:name=".d2TardeMenu" />
-        <activity android:name=".d2TardeValCC" />
-        <activity android:name=".d2TardeResultado" />
-        <activity android:name=".d2TardeValQR" />
+        <activity android:name=".dia2.dia2" />
+        <activity android:name=".dia2.d2Manana" />
+        <activity android:name=".dia2.d2MenuManana" />
+        <activity android:name=".dia2.d2MananaValCC" />
+        <activity android:name=".dia2.d2MananaResultado" />
+        <activity android:name=".dia2.d2MananaValQR" />
+        <activity android:name=".dia2.d2Tarde" />
+        <activity android:name=".dia2.d2TardeMenu" />
+        <activity android:name=".dia2.d2TardeValCC" />
+        <activity android:name=".dia2.d2TardeResultado" />
+        <activity android:name=".dia2.d2TardeValQR" />
+        <activity android:name=".consultar.pantallaError" />
+        <activity android:name=".peticiones_menu"></activity>
     </application>
 
 </manifest>

@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ResutadoConsultaCC">
+    tools:context=".consultar.ResutadoConsultaCC">
 
     <TextView
         android:id="@+id/txtCP2"
@@ -223,7 +223,7 @@
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
         android:fontFamily="@font/roboto"
-        android:text="TextView"
+        android:text="Cargando..."
         android:textAlignment="viewStart"
         android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -242,7 +242,7 @@
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
         android:fontFamily="@font/roboto"
-        android:text="TextView"
+        android:text="Cargando..."
         android:textAlignment="viewStart"
         android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -261,7 +261,7 @@
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
         android:fontFamily="@font/roboto"
-        android:text="TextView"
+        android:text="Cargando..."
         android:textAlignment="viewStart"
         android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"

@@ -4,7 +4,6 @@ import android.Manifest;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.PackageManager;
-import android.net.Uri;
 import android.support.annotation.NonNull;
 import android.support.v4.app.ActivityCompat;
 import android.support.v7.app.AlertDialog;
@@ -16,10 +15,15 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.l.EdukaTIC.consultar.validarUsuarios;
+import com.example.l.EdukaTIC.dia1.dia1;
+import com.example.l.EdukaTIC.dia2.dia2;
+import com.example.l.EdukaTIC.dia3.dia3;
+
 public class Menu extends AppCompatActivity {
 
     private TextView tv1;
-    ImageView img1,img2,img3,img4;
+    ImageView img1,img2,img3,img4,img5;
 
     private final int SOLICTUD_PERMISO_CAMARA = 1;
 
@@ -82,6 +86,17 @@ public class Menu extends AppCompatActivity {
             public void onClick(View view) {
 
                 Intent in = new Intent( Menu.this, dia3.class );
+                startActivity( in );
+            }
+        } );
+
+
+        img5 = (ImageView) findViewById( R.id.imgPeticion );
+        img5.setOnClickListener( new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                Intent in = new Intent( Menu.this, peticiones_menu.class );
                 startActivity( in );
             }
         } );

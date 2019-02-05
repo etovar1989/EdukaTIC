@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".d3ValCC">
+    tools:context=".dia3.d3ValCC">
 
     <ImageView
         android:id="@+id/imgB"
@@ -31,7 +31,7 @@
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
         android:fontFamily="@font/roboto"
-        android:text="Texto"
+        android:text="Cargando..."
         android:textAlignment="center"
         android:textColor="@android:color/darker_gray"
         android:textSize="18sp"
