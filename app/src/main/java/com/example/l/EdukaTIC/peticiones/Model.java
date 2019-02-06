@@ -1,4 +1,4 @@
-package com.example.l.EdukaTIC;
+package com.example.l.EdukaTIC.peticiones;
 
 public class Model {
     String nombreMonitor;
@@ -12,6 +12,8 @@ public class Model {
         this.solicitudMonitor = solicitudMonitor;
         this.idP = idP;
     }
+
+
 
 
     public String getNombreMonitor() {

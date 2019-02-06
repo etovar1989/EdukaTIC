@@ -1,10 +1,12 @@
-package com.example.l.EdukaTIC;
+package com.example.l.EdukaTIC.peticiones;
 
 import android.content.Context;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.TextView;
+
+import com.example.l.EdukaTIC.R;
 
 import java.util.ArrayList;
 

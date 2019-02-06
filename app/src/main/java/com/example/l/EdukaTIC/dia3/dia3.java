@@ -28,7 +28,7 @@ import cz.msebera.android.httpclient.Header;
 
 public class dia3 extends AppCompatActivity implements AdapterView.OnItemSelectedListener{
 
-    ImageView img1,img2,img3,img4;
+    ImageView img1,img2,img3;
     private Spinner spT;
     String dato,opc, nombre;
 

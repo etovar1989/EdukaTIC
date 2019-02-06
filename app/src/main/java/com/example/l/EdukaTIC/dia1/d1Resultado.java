@@ -40,7 +40,7 @@ public class d1Resultado extends AppCompatActivity implements Response.ErrorList
     RequestQueue rq;
     JsonRequest jrq;
 
-    ImageView img1,img2,img3;
+    ImageView img3;
 
 
     @Override

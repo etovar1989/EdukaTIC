@@ -19,11 +19,14 @@ import com.example.l.EdukaTIC.consultar.validarUsuarios;
 import com.example.l.EdukaTIC.dia1.dia1;
 import com.example.l.EdukaTIC.dia2.dia2;
 import com.example.l.EdukaTIC.dia3.dia3;
+import com.example.l.EdukaTIC.peticiones.peticiones_consulta;
+import com.example.l.EdukaTIC.peticiones.peticiones_menu;
+import com.example.l.EdukaTIC.solicitud.solicitud;
 
 public class Menu extends AppCompatActivity {
 
-    private TextView tv1;
-    ImageView img1,img2,img3,img4,img5,img6,img7;
+    private TextView tv1,tv2,tv3,tv4;
+    ImageView img1,img2,img3,img4,img5,img6,img7,img8,img9;
 
     private final int SOLICTUD_PERMISO_CAMARA = 1;
 
@@ -38,6 +41,9 @@ public class Menu extends AppCompatActivity {
         setContentView( R.layout.activity_menu );
 
         tv1 = (TextView)findViewById( R.id.txtNombres );
+        tv2 = (TextView)findViewById( R.id.tvAprobadas );
+        tv3 = (TextView)findViewById( R.id.tvSolicitud);
+        tv4 = (TextView)findViewById( R.id.tvCanceladas );
 
         //usuario.setNames("Hola");
         //usuario.setLastN("mundo");
@@ -48,6 +54,29 @@ public class Menu extends AppCompatActivity {
 
 
         tv1.setText( dato1+" "+dato2 );
+
+        img5 = (ImageView) findViewById( R.id.imgPeticion );
+        img6 = (ImageView) findViewById( R.id.imgPconOk );
+        img7 = (ImageView) findViewById( R.id.imgPconCancel );
+
+        img5.setVisibility( View.INVISIBLE );
+        img6.setVisibility( View.INVISIBLE );
+        img7.setVisibility( View.INVISIBLE );
+
+        tv2.setVisibility( View.INVISIBLE );
+        tv3.setVisibility( View.INVISIBLE );
+        tv4.setVisibility( View.INVISIBLE );
+
+        if(usuario.getPerfil().equals( "1" )){
+            img5.setVisibility( View.VISIBLE );
+            img6.setVisibility( View.VISIBLE );
+            img7.setVisibility( View.VISIBLE );
+
+            tv2.setVisibility( View.VISIBLE );
+            tv3.setVisibility( View.VISIBLE );
+            tv4.setVisibility( View.VISIBLE );
+        }
+
 
 
         img1 = (ImageView) findViewById( R.id.imgVerUs );
@@ -91,7 +120,7 @@ public class Menu extends AppCompatActivity {
         } );
 
 
-        img5 = (ImageView) findViewById( R.id.imgPeticion );
+
         img5.setOnClickListener( new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -102,27 +131,49 @@ public class Menu extends AppCompatActivity {
         } );
 
 
-        img6 = (ImageView) findViewById( R.id.imgPconOk );
+
         img6.setOnClickListener( new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent in = new Intent( Menu.this, peticiones_consulta.class );
                 in.putExtra( "estado","1");
                 startActivity( in );
-                finish();
+
 
             }
         } );
 
 
-        img7 = (ImageView) findViewById( R.id.imgPconCancel );
+
         img7.setOnClickListener( new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent in = new Intent( Menu.this, peticiones_consulta.class );
                 in.putExtra( "estado","2");
                 startActivity( in );
-                finish();
+
+
+            }
+        } );
+
+        img8 = (ImageView) findViewById( R.id.imgSolicitud );
+        img8.setOnClickListener( new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent in = new Intent( Menu.this, solicitud.class );
+                startActivity( in );
+
+
+            }
+        } );
+
+        img9 = (ImageView) findViewById( R.id.imgConsultarSolicitud );
+        img9.setOnClickListener( new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent in = new Intent( Menu.this, consulta_solicitud.class );
+                startActivity( in );
+
 
             }
         } );

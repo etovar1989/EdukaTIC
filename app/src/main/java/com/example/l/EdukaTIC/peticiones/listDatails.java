@@ -1,4 +1,4 @@
-package com.example.l.EdukaTIC;
+package com.example.l.EdukaTIC.peticiones;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -9,6 +9,7 @@ public class listDatails {
     public static ArrayList<Model> getList(String respuesta ){
 
         ArrayList<Model> penticionList = new ArrayList<>( );
+
 
 
         try {

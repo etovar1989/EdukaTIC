@@ -63,7 +63,13 @@ public class SesionFragment extends Fragment implements Response.Listener<JSONOb
 
     }
 
+    private void iniciarSesion(){
+        String url="http://edukatic.icesi.edu.co/complementos_apk/login.php?user="+cajaUser.getText().toString()+
+                "&pwd="+cajaPws.getText().toString();
+        jrq = new JsonObjectRequest(Request.Method.GET, url, null, this, this);
+        rq.add(jrq);
 
+    }
 
 
     @Override
@@ -84,6 +90,8 @@ public class SesionFragment extends Fragment implements Response.Listener<JSONOb
 
             usuario.setNames( jsonObject.optString( "nombres" ) );
             usuario.setLastN( jsonObject.optString( "apellidos" ) );
+            usuario.setIdU( jsonObject.optString( "idU" )  );
+            usuario.setPerfil( jsonObject.optString( "perfil" )  );
 
         } catch (JSONException e) {
             e.printStackTrace();
@@ -96,11 +104,5 @@ public class SesionFragment extends Fragment implements Response.Listener<JSONOb
 
     }
 
-    private void iniciarSesion(){
-        String url="http://edukatic.icesi.edu.co/complementos_apk/login.php?user="+cajaUser.getText().toString()+
-                "&pwd="+cajaPws.getText().toString();
-        jrq = new JsonObjectRequest(Request.Method.GET, url, null, this, this);
-        rq.add(jrq);
 
-    }
 }
