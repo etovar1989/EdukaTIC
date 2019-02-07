@@ -1,16 +1,15 @@
-package com.example.l.EdukaTIC;
+package com.example.l.EdukaTIC.solicitud;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.view.View;
-import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.Toast;
 
+import com.example.l.EdukaTIC.R;
+import com.example.l.EdukaTIC.User;
 import com.example.l.EdukaTIC.peticiones.Model;
 import com.example.l.EdukaTIC.peticiones.PeticionAdapter;
 import com.example.l.EdukaTIC.peticiones.listDatails;
-import com.example.l.EdukaTIC.peticiones.peticiones_consulta;
 import com.loopj.android.http.AsyncHttpClient;
 import com.loopj.android.http.AsyncHttpResponseHandler;
 

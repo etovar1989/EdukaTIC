@@ -58,7 +58,7 @@
         <activity android:name=".peticiones.peticiones_consulta" />
         <activity android:name=".solicitud.solicitud" />
         <activity android:name=".solicitud.solicitud_resultado" />
-        <activity android:name=".consulta_solicitud"></activity>
+        <activity android:name=".solicitud.consulta_solicitud"></activity>
     </application>
 
 </manifest>

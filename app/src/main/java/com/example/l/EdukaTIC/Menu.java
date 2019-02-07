@@ -21,6 +21,7 @@ import com.example.l.EdukaTIC.dia2.dia2;
 import com.example.l.EdukaTIC.dia3.dia3;
 import com.example.l.EdukaTIC.peticiones.peticiones_consulta;
 import com.example.l.EdukaTIC.peticiones.peticiones_menu;
+import com.example.l.EdukaTIC.solicitud.consulta_solicitud;
 import com.example.l.EdukaTIC.solicitud.solicitud;
 
 public class Menu extends AppCompatActivity {

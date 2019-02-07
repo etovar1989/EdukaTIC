@@ -13,7 +13,7 @@ public class listDatails {
         ArrayList<Model> penticionList = new ArrayList<>( );
         String opc = "";
         String estado = "";
-        int imagen=R.drawable.cancel;;
+        int imagen=R.drawable.cancelsol;
 
 
         try {
@@ -25,10 +25,10 @@ public class listDatails {
                     imagen = R.drawable.questionsol;
                 }if(opc.equals( "1" )){
                     estado = "Aprobada";
-                    imagen = R.drawable.confirm;
+                    imagen = R.drawable.confirmsol;
                 }if(opc.equals( "2" )){
                     estado = "Canselada";
-                    imagen = R.drawable.cancel;
+                    imagen = R.drawable.cancelsol;
                 }
 
                 penticionList.add( new Model( jsonArray.getJSONObject( i ).getString( "nombre" ),jsonArray.getJSONObject( i ).getString( "solicitud"),jsonArray.getJSONObject( i ).getString( "idP" ),estado,jsonArray.getJSONObject( i ).getString( "nota" ),imagen  ));
