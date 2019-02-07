@@ -32,7 +32,7 @@ public class peticiones_consulta extends AppCompatActivity {
     private PeticionAdapter peticionAdapter;
     private AsyncHttpClient cliente;
 
-    TextView opcSolicitudConsulta;
+    //TextView opcSolicitudConsulta;
 
 
 
@@ -46,6 +46,7 @@ public class peticiones_consulta extends AppCompatActivity {
         llenarLista();
 
         String opc = getIntent().getStringExtra( "estado" );
+        /*
         opcSolicitudConsulta = (TextView)findViewById( R.id.tvOpcSolicitud );
         if(opc.equals( "1" )){
             opcSolicitudConsulta.setText( "Aprobadas" );
@@ -54,6 +55,7 @@ public class peticiones_consulta extends AppCompatActivity {
             opcSolicitudConsulta.setText( "Cancelar" );
             opcSolicitudConsulta.setTextColor( Color.rgb( 210,49,6 ));
         }
+        */
 
     }
 

@@ -17,35 +17,63 @@
 
         <ImageView
             android:id="@+id/monitorImageView"
-            android:layout_width="83dp"
-            android:layout_height="47dp"
+            android:layout_width="92dp"
+            android:layout_height="114dp"
             android:layout_marginTop="5dp"
             android:src="@mipmap/ic_launcher"
 
             />
 
         <TextView
+            android:id="@+id/estadonmonitor"
+            android:layout_width="278dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="13dp"
+            android:layout_marginLeft="13dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="1dp"
+            android:layout_marginRight="1dp"
+            android:layout_toEndOf="@+id/monitorImageView"
+            android:layout_toRightOf="@+id/monitorImageView" />
+
+        <TextView
             android:id="@+id/namemonitor"
-            android:textStyle="bold"
-            android:layout_width="match_parent"
+            android:layout_width="279dp"
             android:layout_height="wrap_content"
             android:layout_alignTop="@+id/monitorImageView"
-            android:layout_marginTop="13dp"
+            android:layout_marginStart="13dp"
+            android:layout_marginLeft="13dp"
+            android:layout_marginTop="25dp"
             android:layout_toEndOf="@+id/monitorImageView"
             android:layout_toRightOf="@+id/monitorImageView"
-            />
+            android:textStyle="bold" />
 
 
         <TextView
             android:id="@+id/peticionmonitor"
-            android:layout_width="match_parent"
+            android:layout_width="279dp"
             android:layout_height="wrap_content"
             android:layout_below="@+id/monitorImageView"
             android:layout_alignParentEnd="true"
             android:layout_alignParentRight="true"
-            android:layout_marginStart="0dp"
-            android:layout_marginLeft="0dp"
-            android:layout_marginTop="-15dp"
+            android:layout_marginStart="13dp"
+            android:layout_marginLeft="13dp"
+            android:layout_marginTop="-69dp"
+            android:layout_marginEnd="0dp"
+            android:layout_marginRight="0dp"
+            android:layout_toEndOf="@+id/monitorImageView"
+            android:layout_toRightOf="@+id/monitorImageView" />
+
+        <TextView
+            android:id="@+id/notaadmin"
+            android:layout_width="279dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/monitorImageView"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginStart="13dp"
+            android:layout_marginLeft="13dp"
+            android:layout_marginTop="-34dp"
             android:layout_marginEnd="0dp"
             android:layout_marginRight="0dp"
             android:layout_toEndOf="@+id/monitorImageView"

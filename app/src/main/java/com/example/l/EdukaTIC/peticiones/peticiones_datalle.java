@@ -38,6 +38,7 @@ public class peticiones_datalle extends AppCompatActivity implements Response.Li
     String monitorSolicitud = "";
     String idP = "";
     String opcEstado = "";
+    String notas="";
     ImageView img1,img2,img3;
     EditText nota;
 
@@ -55,6 +56,7 @@ public class peticiones_datalle extends AppCompatActivity implements Response.Li
         opcEstado = getIntent().getStringExtra( "estado" );
 
         nota = (EditText)findViewById( R.id.edtNota );
+        notas = nota.getText().toString();
 
         img1 = (ImageView) findViewById( R.id.imgPOk );
         img1.setOnClickListener( new View.OnClickListener() {
@@ -63,7 +65,7 @@ public class peticiones_datalle extends AppCompatActivity implements Response.Li
                 Intent in = new Intent( peticiones_datalle.this, peticiones_resultado.class );
                 in.putExtra( "estado","1");
                 in.putExtra( "idP",idP );
-                in.putExtra( "nota",nota.getText().toString() );
+                in.putExtra( "nota", nota.getText().toString() );
                 startActivity( in );
                 finish();
 

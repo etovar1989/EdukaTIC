@@ -4,6 +4,7 @@ import android.content.Context;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.l.EdukaTIC.R;
@@ -45,11 +46,18 @@ public class PeticionAdapter extends BaseAdapter {
 
         TextView title = (TextView) converView.findViewById( R.id.namemonitor );
         TextView peticion = (TextView) converView.findViewById( R.id.peticionmonitor );
+        TextView estado = (TextView) converView.findViewById( R.id.estadonmonitor );
+        TextView nota = (TextView) converView.findViewById( R.id.notaadmin );
+        ImageView imagen = (ImageView) converView.findViewById( R.id.monitorImageView );
         Model model = models.get( i );
 
 
         title.setText( model.getNombreMonitor() );
         peticion.setText( model.getSolicitudMonitor() );
+        estado.setText( model.getEstado() );
+        nota.setText( model.getNota() );
+        imagen.setImageResource(model.getImagen());
+
 
 
         return converView;

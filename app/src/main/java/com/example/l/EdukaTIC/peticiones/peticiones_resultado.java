@@ -8,6 +8,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
@@ -95,9 +96,10 @@ public class peticiones_resultado extends AppCompatActivity implements Response.
     private void validarPeticion( ) {
         String dato = getIntent().getStringExtra( "idP" );
         String peticionRespuesta = getIntent().getStringExtra( "estado" );
-        String nota = getIntent().getStringExtra( "nota" );
+        String nota = getIntent().getStringExtra( "nota" ).replaceAll( " ","%20" );
+        Toast.makeText( this,"nota: "+nota,Toast.LENGTH_SHORT ).show();
         String url="http://edukatic.icesi.edu.co/complementos_apk/consultar_detalle_resultado.php?idP=" + dato +
-                "&estado=" + peticionRespuesta + "&nota = " + nota;
+                "&estado=" + peticionRespuesta + "&nota="+nota;
         jrq = new JsonObjectRequest(Request.Method.GET, url, null, this, this);
         rq.add(jrq);
     }

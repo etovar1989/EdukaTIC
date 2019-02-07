@@ -4,17 +4,44 @@ public class Model {
     String nombreMonitor;
     String solicitudMonitor;
     String idP;
+    String estado;
+    String nota;
+    int imagen;
 
 
 
-    public Model(String nombreMonitor, String solicitudMonitor, String idP) {
+    public Model(String nombreMonitor, String solicitudMonitor, String idP, String estado, String nota,int imagen) {
         this.nombreMonitor = nombreMonitor;
         this.solicitudMonitor = solicitudMonitor;
         this.idP = idP;
+        this.estado = estado;
+        this.nota = nota;
+        this.imagen = imagen;
     }
 
+    public int getImagen() {
+        return imagen;
+    }
 
+    public void setImagen(int imagen) {
+        this.imagen = imagen;
+    }
 
+    public String getNota() {
+        return nota;
+    }
+
+    public void setNota(String nota) {
+        this.nota = nota;
+    }
+
+    public String getEstado() {
+        return estado;
+    }
+
+    public void setEstado(String estado) {
+        this.estado = estado;
+    }
 
     public String getNombreMonitor() {
         return nombreMonitor;
