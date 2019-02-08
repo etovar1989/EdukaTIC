@@ -222,10 +222,7 @@ public class Menu extends AppCompatActivity {
             startActivity(m);
             return true;
         }
-        if(id==R.id.btnSalir){
-            finish();
-            System.exit( 0 );
-        }
+
         return super.onOptionsItemSelected(opcion_menu);
     }
 

@@ -191,10 +191,7 @@ public class d2Tarde extends AppCompatActivity implements AdapterView.OnItemSele
             finish();
             return true;
         }
-        if(id==R.id.btnSalir){
-            finish();
-            System.exit( 0 );
-        }
+
         return super.onOptionsItemSelected(opcion_menu);
     }
 

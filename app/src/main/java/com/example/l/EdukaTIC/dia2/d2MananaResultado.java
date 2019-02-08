@@ -208,10 +208,7 @@ public class d2MananaResultado extends AppCompatActivity implements Response.Err
             finish();
             return true;
         }
-        if(id==R.id.btnSalir){
-            finish();
-            System.exit( 0 );
-        }
+
         return super.onOptionsItemSelected(opcion_menu);
     }
 

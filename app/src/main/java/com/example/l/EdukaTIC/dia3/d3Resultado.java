@@ -233,10 +233,7 @@ public class d3Resultado extends AppCompatActivity implements Response.ErrorList
             finish();
             return true;
         }
-        if(id==R.id.btnSalir){
-            finish();
-            System.exit( 0 );
-        }
+
         return super.onOptionsItemSelected(opcion_menu);
     }
 

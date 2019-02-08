@@ -130,10 +130,7 @@ public class d2TardeMenu extends AppCompatActivity {
             finish();
             return true;
         }
-        if(id==R.id.btnSalir){
-            finish();
-            System.exit( 0 );
-        }
+
         return super.onOptionsItemSelected(opcion_menu);
     }
 

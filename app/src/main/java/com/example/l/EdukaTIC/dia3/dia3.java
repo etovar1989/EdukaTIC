@@ -208,10 +208,7 @@ public class dia3 extends AppCompatActivity implements AdapterView.OnItemSelecte
             finish();
             return true;
         }
-        if(id==R.id.btnSalir){
-            finish();
-            System.exit( 0 );
-        }
+
         return super.onOptionsItemSelected(opcion_menu);
     }
 

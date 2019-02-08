@@ -182,10 +182,7 @@ public class peticiones_datalle extends AppCompatActivity implements Response.Li
             finish();
             return true;
         }
-        if(id==R.id.btnSalir){
-            finish();
-            System.exit( 0 );
-        }
+
         return super.onOptionsItemSelected(opcion_menu);
     }
 

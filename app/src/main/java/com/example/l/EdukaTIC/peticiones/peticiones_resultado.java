@@ -20,8 +20,10 @@ import com.android.volley.toolbox.Volley;
 import com.example.l.EdukaTIC.Menu;
 import com.example.l.EdukaTIC.R;
 import com.example.l.EdukaTIC.consultar.validarUsuarios;
+import com.example.l.EdukaTIC.dia1.dia1;
 import com.example.l.EdukaTIC.dia2.dia2;
 import com.example.l.EdukaTIC.dia3.dia3;
+
 
 import org.json.JSONObject;
 
@@ -97,7 +99,7 @@ public class peticiones_resultado extends AppCompatActivity implements Response.
         String dato = getIntent().getStringExtra( "idP" );
         String peticionRespuesta = getIntent().getStringExtra( "estado" );
         String nota = getIntent().getStringExtra( "nota" ).replaceAll( " ","%20" );
-        Toast.makeText( this,"nota: "+nota,Toast.LENGTH_SHORT ).show();
+        //Toast.makeText( this,"nota: "+nota,Toast.LENGTH_SHORT ).show();
         String url="http://edukatic.icesi.edu.co/complementos_apk/consultar_detalle_resultado.php?idP=" + dato +
                 "&estado=" + peticionRespuesta + "&nota="+nota;
         jrq = new JsonObjectRequest(Request.Method.GET, url, null, this, this);
@@ -141,7 +143,10 @@ public class peticiones_resultado extends AppCompatActivity implements Response.
             return true;
         }
         if(id==R.id.btnDia1){
-
+            Intent m = new Intent(peticiones_resultado.this, dia1.class);
+            m.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP); // <- Aquí :)
+            startActivity(m);
+            finish();
             return true;
         }
         if(id==R.id.btnDia2){
@@ -158,10 +163,7 @@ public class peticiones_resultado extends AppCompatActivity implements Response.
             finish();
             return true;
         }
-        if(id==R.id.btnSalir){
-            finish();
-            System.exit( 0 );
-        }
+
         return super.onOptionsItemSelected(opcion_menu);
     }
 

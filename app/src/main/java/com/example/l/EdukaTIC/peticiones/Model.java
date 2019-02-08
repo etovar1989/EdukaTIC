@@ -7,16 +7,28 @@ public class Model {
     String estado;
     String nota;
     int imagen;
+    String hora;
 
 
 
-    public Model(String nombreMonitor, String solicitudMonitor, String idP, String estado, String nota,int imagen) {
+
+    public Model(String nombreMonitor, String solicitudMonitor, String idP, String estado, String nota,int imagen, String hora) {
         this.nombreMonitor = nombreMonitor;
         this.solicitudMonitor = solicitudMonitor;
         this.idP = idP;
         this.estado = estado;
         this.nota = nota;
         this.imagen = imagen;
+        this.hora = hora;
+
+    }
+
+    public String getHora() {
+        return hora;
+    }
+
+    public void setHora(String hora) {
+        this.hora = hora;
     }
 
     public int getImagen() {

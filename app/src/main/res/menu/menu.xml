@@ -33,11 +33,7 @@
                 android:icon="@drawable/d3"
                 android:title="Dìa 3"
                 ></item>
-            <item
-                android:id="@+id/btnSalir"
-                android:icon="@drawable/exit"
-                android:title="Salir "
-                ></item>
+
 
         </menu>
 

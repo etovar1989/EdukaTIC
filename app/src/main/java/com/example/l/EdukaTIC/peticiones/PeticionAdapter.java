@@ -49,6 +49,7 @@ public class PeticionAdapter extends BaseAdapter {
         TextView estado = (TextView) converView.findViewById( R.id.estadonmonitor );
         TextView nota = (TextView) converView.findViewById( R.id.notaadmin );
         ImageView imagen = (ImageView) converView.findViewById( R.id.monitorImageView );
+        TextView hora = (TextView) converView.findViewById( R.id.hora );
         Model model = models.get( i );
 
 
@@ -57,6 +58,7 @@ public class PeticionAdapter extends BaseAdapter {
         estado.setText( model.getEstado() );
         nota.setText( model.getNota() );
         imagen.setImageResource(model.getImagen());
+        hora.setText( model.getHora() );
 
 
 
