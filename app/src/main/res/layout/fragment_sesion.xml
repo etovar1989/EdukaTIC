@@ -51,7 +51,7 @@
         android:layout_marginBottom="8dp"
         android:ems="8"
         android:inputType="textMultiLine"
-        android:maxLength="8"
+        android:maxLength="20"
         android:selectAllOnFocus="false"
         android:singleLine="true"
         android:textColor="#FFFFFF"

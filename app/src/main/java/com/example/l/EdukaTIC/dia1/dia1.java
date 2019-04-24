@@ -15,7 +15,7 @@ import com.example.l.EdukaTIC.consultar.validarUsuarios;
 
 public class dia1 extends AppCompatActivity {
 
-    ImageView img1,img2,img3;
+    ImageView img1,img3;
     String opc;
 
     @Override
@@ -33,22 +33,6 @@ public class dia1 extends AppCompatActivity {
 
 
                 opc = "1";
-                com.example.l.EdukaTIC.User usuario = new com.example.l.EdukaTIC.User();
-                usuario.setD1m( opc );
-
-                Intent in = new Intent( dia1.this, d1Menu.class );
-                in.putExtra( "opc",opc );
-                startActivity( in );
-            }
-        } );
-
-        img2 = (ImageView) findViewById( R.id.imgD1m2 );
-        img2.setOnClickListener( new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-
-                opc = "2";
                 com.example.l.EdukaTIC.User usuario = new com.example.l.EdukaTIC.User();
                 usuario.setD1m( opc );
 
