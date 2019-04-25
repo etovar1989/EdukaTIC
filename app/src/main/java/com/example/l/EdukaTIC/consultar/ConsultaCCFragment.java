@@ -32,22 +32,16 @@ public class ConsultaCCFragment extends Fragment implements Response.Listener<JS
     Button consultarCC;
     String nombre = "";
     String taller = "";
-    String ubicacion = "";
+    String salon = "";
     String requisitos = "";
-    String expositor = "";
-    String idTaller = "";
-    String TallerM1 = "";
-    String TallerM2 = "";
-    String GeneralM1 = "";
-    String GeneralM2 = "";
-    String GM1 = "";
-    String GM2 = "";
-    String GT1 = "";
-    String GT2 = "";
-    String GT3 = "";
-    String D2CP1 = "";
-    String D2CP2 = "";
-    String D2CP3 = "";
+    String paralela1 = "";
+    String lugar1 = "";
+    String paralela2 = "";
+    String lugar2 = "";
+    String paralela3 = "";
+    String lugar3 = "";
+
+
 
 
     @Override
@@ -64,8 +58,6 @@ public class ConsultaCCFragment extends Fragment implements Response.Listener<JS
                 validarCedula();
             }
         } );
-
-
 
         return vista;
 
@@ -94,23 +86,16 @@ public class ConsultaCCFragment extends Fragment implements Response.Listener<JS
             jsonObject = jsonArray.getJSONObject( 0 );
 
             nombre = ( jsonObject.optString( "nombreU" ) );
-            taller = ( jsonObject.optString( "nombreTaller" ) );
-            ubicacion = ( jsonObject.optString( "salaTaller" ) );
-            requisitos = ( jsonObject.optString( "reqTaller" ) );
-            expositor = ( jsonObject.optString( "expositorTaller" ) );
-            idTaller = ( jsonObject.optString( "idTaller" ) );
-            TallerM1 = ( jsonObject.optString( "tallerM1" ) );
-            TallerM2 = ( jsonObject.optString( "tallerM2" ) );
-            GeneralM1 = ( jsonObject.optString( "GeneralM1" ) );
-            GeneralM2 = ( jsonObject.optString( "GeneralM2" ) );
-            GM1 = ( jsonObject.optString( "GM1" ) );
-            GM2 = ( jsonObject.optString( "GM2" ) );
-            GT1 = ( jsonObject.optString( "GT1" ) );
-            GT2 = ( jsonObject.optString( "GT2" ) );
-            GT3 = ( jsonObject.optString( "GT3" ) );
-            D2CP1 = ( jsonObject.optString( "D2CP1" ) );
-            D2CP2 = ( jsonObject.optString( "D2CP2" ) );
-            D2CP3 = ( jsonObject.optString( "D2CP3" ) );
+            taller = ( jsonObject.optString( "taller" ) );
+            salon = ( jsonObject.optString( "salon" ) );
+            requisitos = ( jsonObject.optString( "requisitos" ) );
+            paralela1 = ( jsonObject.optString( "paralela1" ) );
+            lugar1 = ( jsonObject.optString( "lugar1" ) );
+            paralela2 = ( jsonObject.optString( "paralela2" ) );
+            lugar2 = ( jsonObject.optString( "lugar2" ) );
+            paralela3 = ( jsonObject.optString( "paralela3" ) );
+            lugar3 = ( jsonObject.optString( "lugar3" ) );
+
 
         } catch (JSONException e) {
             e.printStackTrace();
@@ -118,24 +103,16 @@ public class ConsultaCCFragment extends Fragment implements Response.Listener<JS
 
 
         Intent carajo = new Intent( getContext(), ResutadoConsultaCC.class );
-        carajo.putExtra( "nombre",nombre);
+        carajo.putExtra( "nombreU",nombre);
         carajo.putExtra( "taller",taller);
-        carajo.putExtra( "ubicacion",ubicacion);
+        carajo.putExtra( "salon",salon);
         carajo.putExtra( "requisitos",requisitos);
-        carajo.putExtra( "expositor",expositor);
-        carajo.putExtra( "idTaller",idTaller);
-        carajo.putExtra( "tallerM1",TallerM1);
-        carajo.putExtra( "tallerM2",TallerM2);
-        carajo.putExtra( "GeneralM1",GeneralM1);
-        carajo.putExtra( "GeneralM2",GeneralM2);
-        carajo.putExtra( "GM1",GM1);
-        carajo.putExtra( "GM2",GM2);
-        carajo.putExtra( "GT1",GT1);
-        carajo.putExtra( "GT2",GT2);
-        carajo.putExtra( "GT3",GT3);
-        carajo.putExtra( "D2CP1",D2CP1);
-        carajo.putExtra( "D2CP2",D2CP2);
-        carajo.putExtra( "D2CP3",D2CP3);
+        carajo.putExtra( "paralela1",paralela1);
+        carajo.putExtra( "lugar1",lugar1);
+        carajo.putExtra( "paralela2",paralela2);
+        carajo.putExtra( "lugar2",lugar2);
+        carajo.putExtra( "paralela3",paralela3);
+        carajo.putExtra( "lugar3",lugar3);
 
         startActivity( carajo );
         cajaCC.setText("");

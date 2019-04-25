@@ -15,7 +15,7 @@ import com.example.l.EdukaTIC.consultar.validarUsuarios;
 
 public class d2Manana extends AppCompatActivity {
 
-    ImageView img1,img2,img3,img4;
+    ImageView img1,img3;
     String opc;
 
 
@@ -25,7 +25,6 @@ public class d2Manana extends AppCompatActivity {
         setContentView( R.layout.activity_d2_manana );
 
         img1 = (ImageView)findViewById( R.id.imgIn );
-        img2 = (ImageView)findViewById( R.id.imgOut );
 
         img1.setOnClickListener( new View.OnClickListener() {
             @Override
@@ -36,18 +35,6 @@ public class d2Manana extends AppCompatActivity {
                 startActivity( in );
             }
         } );
-
-        img2.setOnClickListener( new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                opc = "2";
-                Intent in = new Intent( d2Manana.this, d2MenuManana.class );
-                in.putExtra( "opc",opc );
-                startActivity( in );
-            }
-        } );
-
-
 
 
         img3 = (ImageView) findViewById( R.id.imgB8 );

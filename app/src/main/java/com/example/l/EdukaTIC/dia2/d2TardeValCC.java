@@ -9,6 +9,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.l.EdukaTIC.Menu;
 import com.example.l.EdukaTIC.R;
@@ -21,7 +22,7 @@ public class d2TardeValCC extends AppCompatActivity {
     EditText cajaCC;
     Button consultarCC;
     String taller, dato;
-    ImageView img1,img4;
+    ImageView img1;
     TextView textoTipo;
 
     @Override
@@ -39,7 +40,7 @@ public class d2TardeValCC extends AppCompatActivity {
         //Envio el texto recuperado del inten
         textoTipo.setText( dato );
 
-        //Toast.makeText( this,"Opcion"+taller, Toast.LENGTH_SHORT).show();
+        Toast.makeText( this,"Opcion"+taller, Toast.LENGTH_SHORT).show();
 
         consultarCC = (Button) findViewById( R.id.btnD2TConsultarCC );
         consultarCC.setOnClickListener( new View.OnClickListener() {

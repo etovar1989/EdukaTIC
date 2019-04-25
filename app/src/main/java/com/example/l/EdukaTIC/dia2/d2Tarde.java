@@ -88,7 +88,7 @@ public class d2Tarde extends AppCompatActivity implements AdapterView.OnItemSele
     }
 
     private void llenatSpinner() {
-        String url="http://edukatic.icesi.edu.co/complementos_apk/d2Conferencia.php?";
+        String url="http://edukatic.icesi.edu.co/complementos_apk/d2Conferencia.php";
         cliente.post( url, new AsyncHttpResponseHandler() {
             @Override
             public void onSuccess(int statusCode, Header[] headers, byte[] responseBody) {
@@ -132,8 +132,15 @@ public class d2Tarde extends AppCompatActivity implements AdapterView.OnItemSele
         //Texto
         nombre = parent.getItemAtPosition(position).toString();
         //Posicion
-        dato = String.valueOf( parent.getItemIdAtPosition(position) );
-        Toast.makeText( getApplicationContext(),nombre, Toast.LENGTH_LONG).show();
+        String string = nombre;
+        String[] parts = string.split("-");
+        dato = parts[0];
+
+        //Toast.makeText( getApplicationContext(),part1, Toast.LENGTH_LONG).show();
+
+        //dato = String.valueOf( parent.getItemIdAtPosition(position) );
+
+        //Toast.makeText( getApplicationContext(),nombre, Toast.LENGTH_LONG).show();
         //Toast.makeText( this,"Opcion: "+parent.getItemIdAtPosition(position), Toast.LENGTH_SHORT).show();
 
 
