@@ -27,7 +27,6 @@
         <activity android:name=".consultar.ResultadoConsultaQR" />
         <activity android:name=".dia1.dia1" />
         <activity android:name=".dia1.d1ValCC" />
-        <activity android:name=".dia1.d1Menu" />
         <activity android:name=".dia1.d1Resultado" />
         <activity android:name=".dia1.d1ValQR" />
         <activity android:name=".dia3.dia3" />
@@ -42,7 +41,6 @@
 
         <activity android:name=".dia2.dia2" />
         <activity android:name=".dia2.d2Manana" />
-        <activity android:name=".dia2.d2MenuManana" />
         <activity android:name=".dia2.d2MananaValCC" />
         <activity android:name=".dia2.d2MananaResultado" />
         <activity android:name=".dia2.d2MananaValQR" />

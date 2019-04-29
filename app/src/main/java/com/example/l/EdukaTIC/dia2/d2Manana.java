@@ -15,8 +15,7 @@ import com.example.l.EdukaTIC.consultar.validarUsuarios;
 
 public class d2Manana extends AppCompatActivity {
 
-    ImageView img1,img3;
-    String opc;
+    ImageView img1,img2,img3;
 
 
     @Override
@@ -24,20 +23,31 @@ public class d2Manana extends AppCompatActivity {
         super.onCreate( savedInstanceState );
         setContentView( R.layout.activity_d2_manana );
 
-        img1 = (ImageView)findViewById( R.id.imgIn );
 
+        img1= (ImageView) findViewById( R.id.imgD2MCC );
         img1.setOnClickListener( new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                opc = "1";
-                Intent in = new Intent( d2Manana.this, d2MenuManana.class );
-                in.putExtra( "opc",opc );
+
+                Intent in = new Intent( d2Manana.this, d2MananaValCC.class );
                 startActivity( in );
+
+            }
+        } );
+
+        img2= (ImageView) findViewById( R.id.imgD2MQR );
+        img2.setOnClickListener( new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                Intent in = new Intent( d2Manana.this, d2MananaValQR.class );
+                startActivity( in );
+
             }
         } );
 
 
-        img3 = (ImageView) findViewById( R.id.imgB8 );
+        img3 = (ImageView) findViewById( R.id.imgD2MBack1 );
         img3.setOnClickListener( new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -45,19 +55,6 @@ public class d2Manana extends AppCompatActivity {
             }
         } );
 
-/*
-        img4 = (ImageView) findViewById( R.id.imgHome6 );
-        img4.setOnClickListener( new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(d2Manana.this, Menu.class);
-                intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP); // <- Aquí :)
-                startActivity(intent);
-                finish();
-
-            }
-        } );
-*/
 
     }
 

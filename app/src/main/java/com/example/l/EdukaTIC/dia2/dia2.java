@@ -15,7 +15,7 @@ import com.example.l.EdukaTIC.consultar.validarUsuarios;
 
 public class dia2 extends AppCompatActivity {
 
-    ImageView img1,img2,img3,img4;
+    ImageView img1,img2,img3;
 
 
     @Override
@@ -52,19 +52,7 @@ public class dia2 extends AppCompatActivity {
             }
         } );
 
-/*
-        img4 = (ImageView) findViewById( R.id.imgHome5 );
-        img4.setOnClickListener( new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(dia2.this, Menu.class);
-                intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP); // <- Aquí :)
-                startActivity(intent);
-                finish();
 
-            }
-        } );
-*/
     }
 
     /* Barra de menu de la apk*/

@@ -91,9 +91,9 @@ public class ResultadoConsultaQR extends AppCompatActivity implements Response.L
     public void onErrorResponse(VolleyError error) {
         datosCC = getIntent().getStringExtra( "cc" );
         Toast.makeText( this,"No esta registrada la cedula " + datosCC, Toast.LENGTH_SHORT).show();
-        Intent in = new Intent( ResultadoConsultaQR.this, pantallaError.class );
-        in.putExtra( "cc",datosCC );
-        startActivity( in );
+        //Intent in = new Intent( ResultadoConsultaQR.this, pantallaError.class );
+        //in.putExtra( "cc",datosCC );
+        //startActivity( in );
         finish();
 
     }
@@ -108,6 +108,7 @@ public class ResultadoConsultaQR extends AppCompatActivity implements Response.L
         try {
             jsonObject = jsonArray.getJSONObject( 0 );
 
+
             nombre = ( jsonObject.optString( "nombreU" ) );
             taller = ( jsonObject.optString( "taller" ) );
             salon = ( jsonObject.optString( "salon" ) );
@@ -118,6 +119,8 @@ public class ResultadoConsultaQR extends AppCompatActivity implements Response.L
             lugar2 = ( jsonObject.optString( "lugar2" ) );
             paralela3 = ( jsonObject.optString( "paralela3" ) );
             lugar3 = ( jsonObject.optString( "lugar3" ) );
+
+
 
         } catch (JSONException e) {
             e.printStackTrace();

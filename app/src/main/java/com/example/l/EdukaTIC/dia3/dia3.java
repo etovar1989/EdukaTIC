@@ -90,22 +90,6 @@ public class dia3 extends AppCompatActivity implements AdapterView.OnItemSelecte
         } );
 
 
-        /*
-        img4 = (ImageView) findViewById( R.id.imgHome14 );
-        img4.setOnClickListener( new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(dia3.this, Menu.class);
-                intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP); // <- Aquí :)
-                startActivity(intent);
-                finish();
-
-            }
-        } );
-
-        */
-
-
 
     }
 
@@ -152,7 +136,11 @@ public class dia3 extends AppCompatActivity implements AdapterView.OnItemSelecte
         //Texto
         nombre = parent.getItemAtPosition(position).toString();
         //Posicion
-        dato = String.valueOf( parent.getItemIdAtPosition(position) );
+        //dato = String.valueOf( parent.getItemIdAtPosition(position) );
+        String string = nombre;
+        String[] parts = string.split("-");
+        dato = parts[0];
+
         Toast.makeText( getApplicationContext(),nombre, Toast.LENGTH_LONG).show();
         //Toast.makeText( this,"Opcion: "+parent.getItemIdAtPosition(position), Toast.LENGTH_SHORT).show();
 

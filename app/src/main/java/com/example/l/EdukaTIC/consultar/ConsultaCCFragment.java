@@ -67,9 +67,9 @@ public class ConsultaCCFragment extends Fragment implements Response.Listener<JS
     @Override
     public void onErrorResponse(VolleyError error) {
         Toast.makeText( getContext(),"Upss, hay algo que no esta bien con la CC: "+cajaCC.getText().toString(), Toast.LENGTH_SHORT).show();
-        Intent intent = new Intent(getActivity(), pantallaError.class);
-        intent.putExtra("cc",cajaCC.getText().toString());
-        startActivity(intent);
+        //Intent intent = new Intent(getActivity(), pantallaError.class);
+        //intent.putExtra("cc",cajaCC.getText().toString());
+        //startActivity(intent);
         cajaCC.setText("");
 
 

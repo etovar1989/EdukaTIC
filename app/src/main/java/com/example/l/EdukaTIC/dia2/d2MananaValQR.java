@@ -14,7 +14,7 @@ import me.dm7.barcodescanner.zxing.ZXingScannerView;
 public class d2MananaValQR extends AppCompatActivity  implements ZXingScannerView.ResultHandler{
     private ZXingScannerView myScannerView;
 
-    String dato,opc;
+    String dato;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,19 +32,14 @@ public class d2MananaValQR extends AppCompatActivity  implements ZXingScannerVie
     @Override
     public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
         super.onRequestPermissionsResult( requestCode, permissions, grantResults );
-
     }
 
     @Override
     public void handleResult(Result result) {
         dato = result.getText();
-        opc = getIntent().getStringExtra( "opc" );
-
         Toast.makeText( this,"Consulta "+dato, Toast.LENGTH_SHORT).show();
-
         Intent in = new Intent( d2MananaValQR.this, d2MananaResultado.class );
         in.putExtra( "cc",dato);
-        in.putExtra( "opc",opc );
         startActivity( in );
         finish();
 

@@ -21,42 +21,23 @@ public class d1ValCC extends AppCompatActivity {
 
     EditText cajaCC;
     Button consultarCC;
-    String opc;
     ImageView img1;
-    TextView textoTipo;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate( savedInstanceState );
         setContentView( R.layout.activity_d1_val_cc );
 
-        opc = getIntent().getStringExtra( "opc" );
-
         //busco caja de texto para obtener los datos de esta
         cajaCC = (EditText)findViewById( R.id.txtD1CC );
-
-        //busco texto para cambiar el texto que este muestra
-        textoTipo = (TextView) findViewById( R.id.txtTipo1 );
-
-
-
-        if(opc.equals( "1" )){
-            textoTipo.setTextColor( Color.rgb( 222,119,9 ));
-            textoTipo.setText( "Ingreso" );
-        }else{
-            textoTipo.setText( "Reingreso" );
-        }
-
 
         consultarCC = (Button) findViewById( R.id.btnD1Consultar );
         consultarCC.setOnClickListener( new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
-                opc = getIntent().getStringExtra( "opc" );
                 Intent in = new Intent( d1ValCC.this, d1Resultado.class );
                 in.putExtra( "cc",cajaCC.getText().toString());
-                in.putExtra( "opc",opc );
                 startActivity( in );
                 cajaCC.setText( "" );
 
@@ -70,8 +51,6 @@ public class d1ValCC extends AppCompatActivity {
                 finish();
             }
         } );
-
-
 
     }
 

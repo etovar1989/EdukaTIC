@@ -108,23 +108,21 @@ public class d2TardeResultado extends AppCompatActivity implements Response.Erro
             dato1 = ( jsonObject.optString( "validador" ) );
 
             if(dato1.equals( "1" )){
-                resultado.setText( "Registro exitoso, esta es la primera conferencia paralela a la que ingresa el profe." );
+                resultado.setText( "Registro exitoso, puede ingresar a la conferencia." );
+
             }if(dato1.equals( "2" )){
-                resultado.setText( "Registro exitoso, esta es la primera conferencia paralela a la que ingresa el profe." );
-            }if(dato1.equals( "3" )){
-                resultado.setText( "Registro exitoso, esta es la segunda conferencia paralela a la que ingresa el profe." );
-            }if(dato1.equals( "4" )){
-                resultado.setText( "Registro exitoso, esta es la tarcera conferencia paralela a la que ingresa el profe." );
-            }if(dato1.equals( "5" )){
-                resultado.setText( "Upss no se realizó el registro, el profe ya asistió a todas las paralelas del día, si esto no es correcto por favor contactarse con el personal de Eduteka." );
-                resultado.setTextColor( Color.RED);
+                resultado.setText( "Registro fue exitoso aunque no asistio por la ma&ntilde;ana." );
 
             }if(dato1.equals( "20" )){
-                resultado.setText( "El profe no esta registrado para la conferencia, contatarce con el administrador." );
+                resultado.setText( "Uups!! El asistente. No se encuentra registrado en esta conferencia -_-." );
                 resultado.setTextColor( Color.RED);
 
             }if(dato1.equals( "21" )){
-                resultado.setText( "No hay datos." );
+                resultado.setText( "Uups!! El asistente no realizo el registro general, por favor dirígelo a registro general -_-." );
+                resultado.setTextColor( Color.RED);
+
+            }if(dato1.equals( "22" )){
+                resultado.setText( "No hay datos -_-." );
                 resultado.setTextColor( Color.RED);
             }
 

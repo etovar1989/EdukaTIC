@@ -29,13 +29,13 @@ import org.json.JSONObject;
 
 public class d2MananaResultado extends AppCompatActivity implements Response.ErrorListener, Response.Listener<JSONObject>{
 
-    String opc,cc, dato1;
-    TextView textoTipo, resultado;
+    String cc, dato1;
+    TextView resultado;
 
     RequestQueue rq;
     JsonRequest jrq;
 
-    ImageView img3,img4;
+    ImageView img3;
 
 
     @Override
@@ -43,22 +43,13 @@ public class d2MananaResultado extends AppCompatActivity implements Response.Err
         super.onCreate( savedInstanceState );
         setContentView( R.layout.activity_d2_manana_resultado );
 
-        opc = getIntent().getStringExtra( "opc" );
         cc = getIntent().getStringExtra( "cc" );
-
-        textoTipo = (TextView) findViewById( R.id.txtIngRein );
-
-        if(opc.equals( "1" )){
-            textoTipo.setTextColor( Color.rgb( 222,119,9 ));
-            textoTipo.setText( "Ingreso" );
-        }else{
-            textoTipo.setText( "Reingreso" );
-        }
         rq = Volley.newRequestQueue(this);
         validarCedula();
 
+        //Toast.makeText( getApplicationContext(),"Dato "+cc,Toast.LENGTH_SHORT ).show();
 
-        img3 = (ImageView) findViewById( R.id.imgB11 );
+        img3 = (ImageView) findViewById( R.id.imgD2MRBack );
         img3.setOnClickListener( new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -66,26 +57,11 @@ public class d2MananaResultado extends AppCompatActivity implements Response.Err
             }
         } );
 
-        /*
-        img4 = (ImageView) findViewById( R.id.imgHome9 );
-        img4.setOnClickListener( new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(d2MananaResultado.this, Menu.class);
-                intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP); // <- Aquí :)
-                startActivity(intent);
-                finish();
-
-            }
-        } );
-*/
     }
 
     private void validarCedula() {
-
-        opc = getIntent().getStringExtra( "opc" );
         cc = getIntent().getStringExtra( "cc" );
-        String url="http://edukatic.icesi.edu.co/complementos_apk/d2Manana.php?idU=" + cc +"&opc="+opc+"&dia=2";
+        String url="http://edukatic.icesi.edu.co/complementos_apk/d2Manana.php?idU=" + cc;
         jrq = new JsonObjectRequest(Request.Method.GET, url, null, this, this);
         rq.add(jrq);
 
@@ -94,7 +70,7 @@ public class d2MananaResultado extends AppCompatActivity implements Response.Err
     @Override
     public void onErrorResponse(VolleyError error) {
         Toast.makeText( this,"Error contactate con el administrador", Toast.LENGTH_LONG).show();
-        finish();
+        //finish();
 
     }
 
@@ -112,43 +88,20 @@ public class d2MananaResultado extends AppCompatActivity implements Response.Err
 
             if(dato1.equals( "1" )){
                 //Toast.makeText( this,"Se ha realizado el primer registro con exito", Toast.LENGTH_SHORT).show();
-                resultado.setText( "Registro exitoso, este profe puede ingresar a la conferencia" );
+                resultado.setText( "Registro exitoso, puede ingresar a la conferencia." );
             }if(dato1.equals( "2" )){
-                //Toast.makeText( this,"Se ha realizado el segundo registro con exito", Toast.LENGTH_SHORT).show();
-                resultado.setText( "Registro exitoso, este profe puede reingresar a la conferencia" );
-            }if(dato1.equals( "3" )){
-                //Toast.makeText( this,"El profe ya tiene el primer registro", Toast.LENGTH_SHORT).show();
-                resultado.setText( "Upss no se realizó el registro, este profe ya tiene registrado el ingreso a la conferencia, si no es correcto, validar con el personal de Eduteka." );
-                resultado.setTextColor( Color.RED);
-            }if(dato1.equals( "4" )){
-                //Toast.makeText( this,"Se ha realizado el segundo registro con exito", Toast.LENGTH_SHORT).show();
-                resultado.setText( "Registro exitoso, este profe puede ingresar a la conferencia, pero no asistió a la primera parte de la conferencia" );
-            }if(dato1.equals( "5" )){
-                //Toast.makeText( this,"El profe ya tiene el segundo registro", Toast.LENGTH_SHORT).show();
-                resultado.setText( "Upss no se realizó el registro, este profe ya tiene registrado el ingreso y el reingreso a la conferencia, validar con el personal de Eduteka." );
-                resultado.setTextColor( Color.RED);
-            }if(dato1.equals( "6" )){
-                //Toast.makeText( this,"El profe no esta registrado para el evento contatarce con el administrador", Toast.LENGTH_SHORT).show();
-                resultado.setText( "Upss no se realizó el registro, este profe ya tiene registrado el reingreso y el ingreso a la conferencia, validar con el personal de Eduteka." );
-                resultado.setTextColor( Color.RED);
-            }if(dato1.equals( "7" )){
-                //Toast.makeText( this,"No hay datos", Toast.LENGTH_SHORT).show();
-                resultado.setText( "Upss no se realizó el registro, el profe no se registro en la mañana, validar con el personal de Eduteka." );
-                resultado.setTextColor( Color.RED);
-            }if(dato1.equals( "8" )){
-                resultado.setText( "Upss no se realizó el registro, este profe ya tiene registrado el reingreso, validar con el personal de Eduteka." );
-                resultado.setTextColor( Color.RED);
-
-            }if(dato1.equals( "9" )){
-                resultado.setText( "Upss no se realizó el registro, el profe no se registro en la mañana, validar con el personal de Eduteka." );
-                resultado.setTextColor( Color.RED);
-
+                //Toast.makeText( this,"Se ha realizado el primer registro con exito", Toast.LENGTH_SHORT).show();
+                resultado.setText( "Registro exitoso, puede ingresar a la conferencia." );
             }if(dato1.equals( "20" )){
-                resultado.setText( "El profe no esta registrado para la conferencia, contatarce con el administrador." );
-                resultado.setTextColor( Color.RED);
+                resultado.setText( "Uups!! El asistente con cc "+cc+" fue registrado anteriormente -_-." );
+                resultado.setTextColor( Color.rgb( 176,133,8 ));
 
             }if(dato1.equals( "21" )){
-                resultado.setText( "No hay datos." );
+                resultado.setText( "Uups!! El asistente no realizo el registro general, por favor dirígelo a registro general -_-." );
+                resultado.setTextColor( Color.RED);
+
+            }if(dato1.equals( "22" )){
+                resultado.setText( "Uups!! No re enviaron datos, comunicate con el administrador -_-." );
                 resultado.setTextColor( Color.RED);
             }
 

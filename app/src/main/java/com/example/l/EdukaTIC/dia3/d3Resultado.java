@@ -37,7 +37,7 @@ public class d3Resultado extends AppCompatActivity implements Response.ErrorList
     RequestQueue rq;
     JsonRequest jrq;
 
-    ImageView img1,img4;
+    ImageView img1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -68,20 +68,6 @@ public class d3Resultado extends AppCompatActivity implements Response.ErrorList
             }
         } );
 
-        /*
-        img4 = (ImageView) findViewById( R.id.imgHome17 );
-        img4.setOnClickListener( new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(d3Resultado.this, Menu.class);
-                intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP); // <- Aquí :)
-                startActivity(intent);
-                finish();
-
-            }
-        } );
-        */
-
         opc = getIntent().getStringExtra( "opc" );
 
         txtDato = (TextView) findViewById( R.id.txtD3Tipo );
@@ -107,6 +93,7 @@ public class d3Resultado extends AppCompatActivity implements Response.ErrorList
         opc = getIntent().getStringExtra( "opc" );
         cc = getIntent().getStringExtra( "cc" );
         taller = getIntent().getStringExtra( "taller" );
+        Toast.makeText( this,"num "+taller,Toast.LENGTH_SHORT ).show();
         String url="http://edukatic.icesi.edu.co/complementos_apk/d3Validacion.php?idU=" + cc +"&taller="+taller+"&opc="+opc;
         jrq = new JsonObjectRequest(Request.Method.GET, url, null, this, this);
         rq.add(jrq);
@@ -148,31 +135,11 @@ public class d3Resultado extends AppCompatActivity implements Response.ErrorList
                 //Toast.makeText( this,"Se ha realizado el segundo registro con exito", Toast.LENGTH_SHORT).show();
                 texto.setText( "Registro exitoso, este profe puede ingresar a el taller, pero no asistió a la primera parte del taller" );
 
-            }if(dato1.equals( "5" )){
-                //Toast.makeText( this,"El profe ya tiene el segundo registro", Toast.LENGTH_SHORT).show();
-                texto.setText( "Upss no se realizó el registro, este profe ya tiene registrado el ingreso y el reingreso a el taller, validar con el personal de Eduteka." );
-                texto.setTextColor( Color.RED);
-
-            }if(dato1.equals( "6" )){
-                //Toast.makeText( this,"El profe no esta registrado para el evento contatarce con el administrador", Toast.LENGTH_SHORT).show();
-                texto.setText( "Upss no se realizó el registro, este profe ya tiene registrado el reingreso y el ingreso a el taller, validar con el personal de Eduteka." );
-                texto.setTextColor( Color.RED);
-
-            }if(dato1.equals( "7" )){
-                //Toast.makeText( this,"No hay datos", Toast.LENGTH_SHORT).show();
-                texto.setText( "Upss no se realizó el registro, el profe no se registro en la mañana, validar con el personal de Eduteka." );
-                texto.setTextColor( Color.RED);
-
-            }if(dato1.equals( "8" )){
-                texto.setText( "Upss no se realizó el registro, este profe ya tiene registrado el reingreso, validar con el personal de Eduteka." );
-                texto.setTextColor( Color.RED);
-
             }if(dato1.equals( "20" )){
-                texto.setText( "El profe no esta registrado para el taller contatarce con el administrador." );
+                texto.setText( "Uups!! El asistente no realizo el registro general, por favor dirígelo a registro general -_-." );
                 texto.setTextColor( Color.RED);
-
             }if(dato1.equals( "21" )){
-                texto.setText( "No hay datos." );
+                texto.setText( "No hay datos -_-." );
                 texto.setTextColor( Color.RED);
             }
 

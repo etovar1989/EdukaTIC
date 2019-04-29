@@ -16,8 +16,8 @@ public class d1ValQR extends AppCompatActivity implements ZXingScannerView.Resul
 
     private ZXingScannerView myScannerView;
 
-    String dato,opc;
-    ImageView img1;
+    String dato;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,13 +43,12 @@ public class d1ValQR extends AppCompatActivity implements ZXingScannerView.Resul
     @Override
     public void handleResult(Result result) {
         dato = result.getText();
-        opc = getIntent().getStringExtra( "opc" );
 
         Toast.makeText( this,"Consulta "+dato, Toast.LENGTH_SHORT).show();
 
         Intent in = new Intent( d1ValQR.this, d1Resultado.class );
         in.putExtra( "cc",dato);
-        in.putExtra( "opc",opc );
+
         startActivity( in );
         finish();
 

@@ -8,6 +8,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.l.EdukaTIC.Menu;
 import com.example.l.EdukaTIC.R;
@@ -33,7 +34,7 @@ public class d3Menu extends AppCompatActivity {
 
         tv1.setText( dato3 );
 
-        //Toast.makeText( this,"Opcion "+dato2, Toast.LENGTH_SHORT).show();
+        //Toast.makeText( this,"Opcion "+dato1, Toast.LENGTH_SHORT).show();
 
         dato2 = getIntent().getStringExtra( "opc" );
 
@@ -86,21 +87,6 @@ public class d3Menu extends AppCompatActivity {
                 finish();
             }
         } );
-
-
-        /*
-        img4 = (ImageView) findViewById( R.id.imgHome15 );
-        img4.setOnClickListener( new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(d3Menu.this, Menu.class);
-                intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP); // <- Aquí :)
-                startActivity(intent);
-                finish();
-
-            }
-        } );
-        */
 
     }
 
