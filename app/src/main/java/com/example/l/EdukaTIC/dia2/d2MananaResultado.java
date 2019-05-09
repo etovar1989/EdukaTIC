@@ -101,7 +101,7 @@ public class d2MananaResultado extends AppCompatActivity implements Response.Err
                 resultado.setTextColor( Color.RED);
 
             }if(dato1.equals( "22" )){
-                resultado.setText( "Uups!! No re enviaron datos, comunicate con el administrador -_-." );
+                resultado.setText( "Uups!! No se enviaron datos, comunicate con el administrador -_-." );
                 resultado.setTextColor( Color.RED);
             }
 

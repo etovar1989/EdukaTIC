@@ -90,10 +90,9 @@ public class d3Resultado extends AppCompatActivity implements Response.ErrorList
     }
 
     private void validarCedula( ) {
-        opc = getIntent().getStringExtra( "opc" );
         cc = getIntent().getStringExtra( "cc" );
         taller = getIntent().getStringExtra( "taller" );
-        Toast.makeText( this,"num "+taller,Toast.LENGTH_SHORT ).show();
+        opc = getIntent().getStringExtra( "opc" );
         String url="http://edukatic.icesi.edu.co/complementos_apk/d3Validacion.php?idU=" + cc +"&taller="+taller+"&opc="+opc;
         jrq = new JsonObjectRequest(Request.Method.GET, url, null, this, this);
         rq.add(jrq);
@@ -128,17 +127,25 @@ public class d3Resultado extends AppCompatActivity implements Response.ErrorList
 
             }if(dato1.equals( "3" )){
                 //Toast.makeText( this,"El profe ya tiene el primer registro", Toast.LENGTH_SHORT).show();
-                texto.setText( "Upss no se realizó el registro, este profe ya tiene registrado el ingreso a el taller, si no es correcto, validar con el personal de Eduteka." );
-                texto.setTextColor( Color.RED);
+                texto.setText( "Se realizo el registro del profe para el taller, aunque primero se realizo el registro por la mañana -_-." );
 
             }if(dato1.equals( "4" )){
                 //Toast.makeText( this,"Se ha realizado el segundo registro con exito", Toast.LENGTH_SHORT).show();
-                texto.setText( "Registro exitoso, este profe puede ingresar a el taller, pero no asistió a la primera parte del taller" );
+                texto.setText( "Uups!! No realizo el registro porque el profe ya fue realizado en otra oportunidad -_-." );
+                texto.setTextColor( Color.RED);
+
+            }if(dato1.equals( "5" )){
+                //Toast.makeText( this,"Se ha realizado el segundo registro con exito", Toast.LENGTH_SHORT).show();
+                texto.setText( "Uups!! No realizo el registro porque el profe ya tiene los dos registros -_-." );
+                texto.setTextColor( Color.RED);
 
             }if(dato1.equals( "20" )){
-                texto.setText( "Uups!! El asistente no realizo el registro general, por favor dirígelo a registro general -_-." );
+                texto.setText( "Uups!! No realizo el registro porque el profe no está inscrito a este taller -_-." );
                 texto.setTextColor( Color.RED);
             }if(dato1.equals( "21" )){
+                texto.setText( "Uups!! El asistente no realizo el registro general, por favor dirígelo a registro general -_-." );
+                texto.setTextColor( Color.RED);
+            }if(dato1.equals( "22" )){
                 texto.setText( "No hay datos -_-." );
                 texto.setTextColor( Color.RED);
             }
