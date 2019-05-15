@@ -35,7 +35,7 @@ public class d2TardeResultado extends AppCompatActivity implements Response.Erro
     RequestQueue rq;
     JsonRequest jrq;
 
-    ImageView img1,img4;
+    ImageView img1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -61,25 +61,8 @@ public class d2TardeResultado extends AppCompatActivity implements Response.Erro
         } );
 
 
-        /*
-        img4 = (ImageView) findViewById( R.id.imgHome13 );
-        img4.setOnClickListener( new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(d2TardeResultado.this, Menu.class);
-                intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP); // <- Aquí :)
-                startActivity(intent);
-                finish();
-
-            }
-        } );
-
-        */
-
     }
     private void validarCedula() {
-
-
         cc = getIntent().getStringExtra( "cc" );
         taller = getIntent().getStringExtra( "taller" );
         String url="http://edukatic.icesi.edu.co/complementos_apk/d2Tarde.php?idU="+cc+"&conferencia="+taller;
@@ -111,14 +94,14 @@ public class d2TardeResultado extends AppCompatActivity implements Response.Erro
                 resultado.setText( "Registro exitoso, puede ingresar a la conferencia." );
 
             }if(dato1.equals( "2" )){
-                resultado.setText( "Registro fue exitoso aunque no asistio por la ma&ntilde;ana." );
+                resultado.setText( "Registro fue exitoso aunque no asistio por la mañana." );
 
             }if(dato1.equals( "20" )){
-                resultado.setText( "Uups!! El asistente. No se encuentra registrado en esta conferencia -_-." );
+                resultado.setText( "Upps!! El asistente. No se encuentra registrado en esta conferencia -_-." );
                 resultado.setTextColor( Color.RED);
 
             }if(dato1.equals( "21" )){
-                resultado.setText( "Uups!! El asistente no realizo el registro general, por favor dirígelo a registro general -_-." );
+                resultado.setText( "Upps!! El asistente no realizo el registro general, por favor dirígelo a registro general -_-." );
                 resultado.setTextColor( Color.RED);
 
             }if(dato1.equals( "22" )){

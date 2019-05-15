@@ -39,6 +39,10 @@ public class d3Resultado extends AppCompatActivity implements Response.ErrorList
 
     ImageView img1;
 
+
+
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate( savedInstanceState );
@@ -91,11 +95,14 @@ public class d3Resultado extends AppCompatActivity implements Response.ErrorList
 
     private void validarCedula( ) {
         cc = getIntent().getStringExtra( "cc" );
+        cc = cc.trim();
         taller = getIntent().getStringExtra( "taller" );
+        taller = taller.trim();
         opc = getIntent().getStringExtra( "opc" );
-        String url="http://edukatic.icesi.edu.co/complementos_apk/d3Validacion.php?idU=" + cc +"&taller="+taller+"&opc="+opc;
+        String url="http://edukatic.icesi.edu.co/complementos_apk/d3Validacion.php?idU="+cc+"&taller="+taller+"&opc="+opc;
         jrq = new JsonObjectRequest(Request.Method.GET, url, null, this, this);
         rq.add(jrq);
+
     }
 
     @Override
@@ -109,13 +116,14 @@ public class d3Resultado extends AppCompatActivity implements Response.ErrorList
 
         JSONArray jsonArray = response.optJSONArray( "datos" );
         JSONObject jsonObject = null;
+        texto = (TextView)findViewById( R.id.txtRespuesta );
 
         try {
             jsonObject = jsonArray.getJSONObject( 0 );
 
             dato1 = ( jsonObject.optString( "validador" ) );
             //Toast.makeText( this,dato1, Toast.LENGTH_SHORT).show();
-            texto = (TextView)findViewById( R.id.txtRespuesta );
+
 
             if(dato1.equals( "1" )){
                 //Toast.makeText( this,"Se ha realizado el primer registro con exito", Toast.LENGTH_SHORT).show();
@@ -123,27 +131,38 @@ public class d3Resultado extends AppCompatActivity implements Response.ErrorList
 
             }if(dato1.equals( "2" )){
                 //Toast.makeText( this,"Se ha realizado el segundo registro con exito", Toast.LENGTH_SHORT).show();
-                texto.setText( "Registro exitoso, este profe puede reingresar a el taller" );
+                texto.setText( "Se realizo el registro del profe para el taller, aunque no se realizo el registro por la mañana -_-." );
 
             }if(dato1.equals( "3" )){
                 //Toast.makeText( this,"El profe ya tiene el primer registro", Toast.LENGTH_SHORT).show();
-                texto.setText( "Se realizo el registro del profe para el taller, aunque primero se realizo el registro por la mañana -_-." );
+                texto.setText( "Se realizo el registro del profe para el taller, aunque primero se realizo el registro por la tarde -_-." );
 
             }if(dato1.equals( "4" )){
                 //Toast.makeText( this,"Se ha realizado el segundo registro con exito", Toast.LENGTH_SHORT).show();
-                texto.setText( "Uups!! No realizo el registro porque el profe ya fue realizado en otra oportunidad -_-." );
+                texto.setText( "Upps!! No se realizo el registro porque el profe ya fue gistrado en otra oportunidad -_-." );
                 texto.setTextColor( Color.RED);
 
             }if(dato1.equals( "5" )){
                 //Toast.makeText( this,"Se ha realizado el segundo registro con exito", Toast.LENGTH_SHORT).show();
-                texto.setText( "Uups!! No realizo el registro porque el profe ya tiene los dos registros -_-." );
+                texto.setText( "Registro exitoso, este profe puede reingresar a el taller" );
+
+            }if(dato1.equals( "6" )){
+                //Toast.makeText( this,"Se ha realizado el segundo registro con exito", Toast.LENGTH_SHORT).show();
+                texto.setText( "Upps!! No se realizo el registro porque el profe ya fue gistrado en otra oportunidad -_-." );
                 texto.setTextColor( Color.RED);
 
+            }if(dato1.equals( "10" )){
+                //Toast.makeText( this,"Se ha realizado el segundo registro con exito", Toast.LENGTH_SHORT).show();
+                texto.setText( "Upps!! No se realizo el registro porque el profe ya tiene los dos registros -_-." );
+                texto.setTextColor( Color.RED);
+
+
+
             }if(dato1.equals( "20" )){
-                texto.setText( "Uups!! No realizo el registro porque el profe no está inscrito a este taller -_-." );
+                texto.setText( "Upps!! No realizo el registro porque el profe no está inscrito a este taller -_-." );
                 texto.setTextColor( Color.RED);
             }if(dato1.equals( "21" )){
-                texto.setText( "Uups!! El asistente no realizo el registro general, por favor dirígelo a registro general -_-." );
+                texto.setText( "Upps!! El asistente no realizo el registro general, por favor dirígelo a registro general -_-." );
                 texto.setTextColor( Color.RED);
             }if(dato1.equals( "22" )){
                 texto.setText( "No hay datos -_-." );

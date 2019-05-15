@@ -93,15 +93,15 @@ public class d2MananaResultado extends AppCompatActivity implements Response.Err
                 //Toast.makeText( this,"Se ha realizado el primer registro con exito", Toast.LENGTH_SHORT).show();
                 resultado.setText( "Registro exitoso, puede ingresar a la conferencia." );
             }if(dato1.equals( "20" )){
-                resultado.setText( "Uups!! El asistente con cc "+cc+" fue registrado anteriormente -_-." );
+                resultado.setText( "Upps!! El asistente con cc "+cc+" fue registrado anteriormente -_-." );
                 resultado.setTextColor( Color.rgb( 176,133,8 ));
 
             }if(dato1.equals( "21" )){
-                resultado.setText( "Uups!! El asistente no realizo el registro general, por favor dirígelo a registro general -_-." );
+                resultado.setText( "Upps!! El asistente no realizo el registro general, por favor dirígelo a registro general -_-." );
                 resultado.setTextColor( Color.RED);
 
             }if(dato1.equals( "22" )){
-                resultado.setText( "Uups!! No se enviaron datos, comunicate con el administrador -_-." );
+                resultado.setText( "Upps!! No se enviaron datos, comunicate con el administrador -_-." );
                 resultado.setTextColor( Color.RED);
             }
 

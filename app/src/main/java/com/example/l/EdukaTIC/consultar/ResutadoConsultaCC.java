@@ -27,7 +27,7 @@ public class ResutadoConsultaCC extends AppCompatActivity {
         tv1 = (TextView)findViewById( R.id.txtConCCN  );
         tv2 = (TextView)findViewById( R.id.txtConCCT );
         tv3 = (TextView)findViewById( R.id.txtConCCU );
-        tv4 = (TextView)findViewById( R.id.txtConCCR );
+        //tv4 = (TextView)findViewById( R.id.txtConCCR );
         tv5 = (TextView)findViewById( R.id.txtConCCP1 );
         tv6 = (TextView)findViewById( R.id.txtConCCL1 );
         tv7 = (TextView)findViewById( R.id.txtConCCP2 );
@@ -39,7 +39,7 @@ public class ResutadoConsultaCC extends AppCompatActivity {
         String dato1 = getIntent().getStringExtra( "nombreU" );
         String dato2 = getIntent().getStringExtra( "taller" );
         String dato3 = getIntent().getStringExtra( "salon" );
-        String dato4 = getIntent().getStringExtra( "requisitos" );
+        //String dato4 = getIntent().getStringExtra( "requisitos" );
         String dato5 = getIntent().getStringExtra( "paralela1" );
         String dato6 = getIntent().getStringExtra( "lugar1" );
         String dato7 = getIntent().getStringExtra( "paralela2" );
@@ -51,7 +51,7 @@ public class ResutadoConsultaCC extends AppCompatActivity {
         tv1.setText(dato1);
         tv2.setText(dato2);
         tv3.setText(dato3);
-        tv4.setText(dato4);
+        //tv4.setText(dato4);
         tv5.setText(dato5);
         tv6.setText(dato6);
         tv7.setText(dato7);

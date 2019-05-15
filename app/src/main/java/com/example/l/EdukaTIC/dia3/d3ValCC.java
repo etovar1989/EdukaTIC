@@ -60,7 +60,7 @@ public class d3ValCC extends AppCompatActivity {
 
 
 
-        consultarCC = (Button) findViewById( R.id.btnD1Consultar );
+        consultarCC = (Button) findViewById( R.id.btnD3Consultar );
         consultarCC.setOnClickListener( new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -85,22 +85,11 @@ public class d3ValCC extends AppCompatActivity {
             }
         } );
 
-        /*
-        img4 = (ImageView) findViewById( R.id.imgHome16 );
-        img4.setOnClickListener( new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(d3ValCC.this, Menu.class);
-                intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP); // <- Aquí :)
-                startActivity(intent);
-                finish();
-
-            }
-        } );
-
-        */
-
     }
+
+
+
+
 
 
     /* Barra de menu de la apk*/

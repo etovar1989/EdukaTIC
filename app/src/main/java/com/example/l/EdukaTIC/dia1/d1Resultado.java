@@ -102,13 +102,13 @@ public class d1Resultado extends AppCompatActivity implements Response.ErrorList
                 //Toast.makeText( this,"Se ha realizado el primer registro con exito", Toast.LENGTH_SHORT).show();
                 resultadoD1.setText( "Registro exitoso, puede ingresar a la conferencia." );
             }if(dato1 == 20){
-                resultadoD1.setText( "Uups!! El asistente con cc "+cc+" fue registrado anteriormente -_-." );
+                resultadoD1.setText( "Upps!! El asistente con cc "+cc+" fue registrado anteriormente -_-." );
                 resultadoD1.setTextColor( Color.rgb( 176,133,8 ));
             }if(dato1 == 21){
-                resultadoD1.setText( "Uups!! El asistente no realizo el registro general, por favor dirígelo a registro general -_-." );
+                resultadoD1.setText( "Upps!! El asistente no realizo el registro general, por favor dirígelo a registro general -_-." );
                 resultadoD1.setTextColor( Color.RED);
             }if(dato1 == 22){
-                resultadoD1.setText( "Uups!! No re enviaron datos, comunicate con el administrador -_-." );
+                resultadoD1.setText( "Upps!! No re enviaron datos, comunicate con el administrador -_-." );
                 resultadoD1.setTextColor( Color.RED);
             }
 

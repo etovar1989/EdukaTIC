@@ -1,7 +1,6 @@
 package com.example.l.EdukaTIC.dia1;
 
 import android.content.Intent;
-import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.MenuItem;
@@ -9,7 +8,6 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
-import android.widget.TextView;
 
 import com.example.l.EdukaTIC.Menu;
 import com.example.l.EdukaTIC.R;
@@ -31,7 +29,7 @@ public class d1ValCC extends AppCompatActivity {
         //busco caja de texto para obtener los datos de esta
         cajaCC = (EditText)findViewById( R.id.txtD1CC );
 
-        consultarCC = (Button) findViewById( R.id.btnD1Consultar );
+        consultarCC = (Button) findViewById( R.id.btnD3Consultar );
         consultarCC.setOnClickListener( new View.OnClickListener() {
             @Override
             public void onClick(View view) {

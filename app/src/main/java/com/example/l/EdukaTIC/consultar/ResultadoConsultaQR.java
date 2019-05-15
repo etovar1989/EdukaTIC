@@ -37,7 +37,7 @@ public class ResultadoConsultaQR extends AppCompatActivity implements Response.L
     String nombre = "";
     String taller = "";
     String salon = "";
-    String requisitos = "";
+    //String requisitos = "";
     String paralela1 = "";
     String lugar1 = "";
     String paralela2 = "";
@@ -112,7 +112,7 @@ public class ResultadoConsultaQR extends AppCompatActivity implements Response.L
             nombre = ( jsonObject.optString( "nombreU" ) );
             taller = ( jsonObject.optString( "taller" ) );
             salon = ( jsonObject.optString( "salon" ) );
-            requisitos = ( jsonObject.optString( "requisitos" ) );
+            //requisitos = ( jsonObject.optString( "requisitos" ) );
             paralela1 = ( jsonObject.optString( "paralela1" ) );
             lugar1 = ( jsonObject.optString( "lugar1" ) );
             paralela2 = ( jsonObject.optString( "paralela2" ) );
@@ -133,7 +133,7 @@ public class ResultadoConsultaQR extends AppCompatActivity implements Response.L
         tv1 = (TextView)findViewById( R.id.txtConCQN  );
         tv2 = (TextView)findViewById( R.id.txtConCQT );
         tv3 = (TextView)findViewById( R.id.txtConCQU );
-        tv4 = (TextView)findViewById( R.id.txtConCQR );
+        //tv4 = (TextView)findViewById( R.id.txtConCQR );
         tv5 = (TextView)findViewById( R.id.txtConCQP1 );
         tv6 = (TextView)findViewById( R.id.txtConCQL1 );
         tv7 = (TextView)findViewById( R.id.txtConCQP2 );
@@ -147,7 +147,7 @@ public class ResultadoConsultaQR extends AppCompatActivity implements Response.L
         tv1.setText(nombre);
         tv2.setText(taller);
         tv3.setText(salon);
-        tv4.setText(requisitos);
+        //tv4.setText(requisitos);
         tv5.setText(paralela1);
         tv6.setText(lugar1);
         tv7.setText(paralela2);
