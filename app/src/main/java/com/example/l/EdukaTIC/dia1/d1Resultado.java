@@ -105,7 +105,7 @@ public class d1Resultado extends AppCompatActivity implements Response.ErrorList
                 resultadoD1.setText( "Upps!! El asistente con cc "+cc+" fue registrado anteriormente -_-." );
                 resultadoD1.setTextColor( Color.rgb( 176,133,8 ));
             }if(dato1 == 21){
-                resultadoD1.setText( "Upps!! El asistente no realizo el registro general, por favor dirígelo a registro general -_-." );
+                resultadoD1.setText( "Upps!! El asistente no realizó el registro general, por favor dirígelo a registro general -_-." );
                 resultadoD1.setTextColor( Color.RED);
             }if(dato1 == 22){
                 resultadoD1.setText( "Upps!! No re enviaron datos, comunicate con el administrador -_-." );

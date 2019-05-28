@@ -97,7 +97,7 @@ public class d2MananaResultado extends AppCompatActivity implements Response.Err
                 resultado.setTextColor( Color.rgb( 176,133,8 ));
 
             }if(dato1.equals( "21" )){
-                resultado.setText( "Upps!! El asistente no realizo el registro general, por favor dirígelo a registro general -_-." );
+                resultado.setText( "Upps!! El asistente no realizó el registro general, por favor dirígelo a registro general -_-." );
                 resultado.setTextColor( Color.RED);
 
             }if(dato1.equals( "22" )){

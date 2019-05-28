@@ -131,15 +131,15 @@ public class d3Resultado extends AppCompatActivity implements Response.ErrorList
 
             }if(dato1.equals( "2" )){
                 //Toast.makeText( this,"Se ha realizado el segundo registro con exito", Toast.LENGTH_SHORT).show();
-                texto.setText( "Se realizo el registro del profe para el taller, aunque no se realizo el registro por la mañana -_-." );
+                texto.setText( "Se realizó el registro del profe para el taller, aunque no se realizó el registro por la mañana -_-." );
 
             }if(dato1.equals( "3" )){
                 //Toast.makeText( this,"El profe ya tiene el primer registro", Toast.LENGTH_SHORT).show();
-                texto.setText( "Se realizo el registro del profe para el taller, aunque primero se realizo el registro por la tarde -_-." );
+                texto.setText( "Se realizó el registro del profe para el taller, aunque primero se realizó el registro por la tarde -_-." );
 
             }if(dato1.equals( "4" )){
                 //Toast.makeText( this,"Se ha realizado el segundo registro con exito", Toast.LENGTH_SHORT).show();
-                texto.setText( "Upps!! No se realizo el registro porque el profe ya fue gistrado en otra oportunidad -_-." );
+                texto.setText( "Upps!! No se realizó el registro porque el profe ya fue gistrado en otra oportunidad -_-." );
                 texto.setTextColor( Color.RED);
 
             }if(dato1.equals( "5" )){
@@ -148,7 +148,7 @@ public class d3Resultado extends AppCompatActivity implements Response.ErrorList
 
             }if(dato1.equals( "6" )){
                 //Toast.makeText( this,"Se ha realizado el segundo registro con exito", Toast.LENGTH_SHORT).show();
-                texto.setText( "Upps!! No se realizo el registro porque el profe ya fue gistrado en otra oportunidad -_-." );
+                texto.setText( "Upps!! No se realizó el registro porque el profe ya fue gistrado en otra oportunidad -_-." );
                 texto.setTextColor( Color.RED);
 
             }if(dato1.equals( "10" )){
@@ -159,10 +159,10 @@ public class d3Resultado extends AppCompatActivity implements Response.ErrorList
 
 
             }if(dato1.equals( "20" )){
-                texto.setText( "Upps!! No realizo el registro porque el profe no está inscrito a este taller -_-." );
+                texto.setText( "Upps!! No realizó el registro porque el profe no está inscrito a este taller -_-." );
                 texto.setTextColor( Color.RED);
             }if(dato1.equals( "21" )){
-                texto.setText( "Upps!! El asistente no realizo el registro general, por favor dirígelo a registro general -_-." );
+                texto.setText( "Upps!! El asistente no realizó el registro general, por favor dirígelo a registro general -_-." );
                 texto.setTextColor( Color.RED);
             }if(dato1.equals( "22" )){
                 texto.setText( "No hay datos -_-." );

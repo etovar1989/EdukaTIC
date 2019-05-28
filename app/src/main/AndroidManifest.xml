@@ -13,9 +13,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
-        android:usesCleartextTraffic="true"
-        >
-
+        android:usesCleartextTraffic="true">
+        <activity android:name=".consultar.error_consulta"></activity>
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -23,7 +22,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
         <activity android:name=".Menu" />
         <activity android:name=".consultar.validarUsuarios" />
         <activity android:name=".consultar.consultaCC" />
@@ -61,7 +59,7 @@
         <activity android:name=".peticiones.peticiones_consulta" />
         <activity android:name=".solicitud.solicitud" />
         <activity android:name=".solicitud.solicitud_resultado" />
-        <activity android:name=".solicitud.consulta_solicitud"></activity>
+        <activity android:name=".solicitud.consulta_solicitud" />
     </application>
 
 </manifest>
